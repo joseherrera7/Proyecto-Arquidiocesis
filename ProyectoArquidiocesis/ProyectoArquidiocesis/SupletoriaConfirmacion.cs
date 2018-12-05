@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoArquidiocesis
 {
-    public partial class Form1 : Form
+    public partial class SupletoriaConfirmacion : MaterialSkin.Controls.MaterialForm
     {
-        public Form1()
+        public SupletoriaConfirmacion()
         {
             InitializeComponent();
         }
