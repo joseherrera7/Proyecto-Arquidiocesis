@@ -22,17 +22,21 @@ namespace ProyectoArquidiocesis
 
         private void BtnExpedienteMatrimonial_Click(object sender, EventArgs e)
         {
-
+            ExpedienteMatrimonial expedienteMatrimonial = new ExpedienteMatrimonial();
+            expedienteMatrimonial.Show();
+            
         }
 
         private void BtnSupletoriaBautizo_Click(object sender, EventArgs e)
         {
-
+            SupletoriaBautizo supletoriaBautizo = new SupletoriaBautizo();
+            supletoriaBautizo.Show();
         }
 
         private void BtnSupletoriaConfirmacion_Click_1(object sender, EventArgs e)
         {
-
+            SupletoriaConfirmacion supletoriaConfirmacion = new SupletoriaConfirmacion();
+            supletoriaConfirmacion.Show();
         }
     }
 }
