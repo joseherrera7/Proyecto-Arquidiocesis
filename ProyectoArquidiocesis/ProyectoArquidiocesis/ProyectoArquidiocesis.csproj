@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GlassButton">
-      <HintPath>..\..\..\..\..\Downloads\GlassButton (demo)\GlassButton.dll</HintPath>
+      <HintPath>..\..\..\..\GlassButton.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>

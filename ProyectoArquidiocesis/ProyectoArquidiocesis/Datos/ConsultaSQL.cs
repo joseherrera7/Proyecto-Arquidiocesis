@@ -100,7 +100,6 @@ namespace ProyectoArquidiocesis.Datos
                 {
                     Console.WriteLine(e.ToString());
                     Console.WriteLine("Entro catch1");
-
                 }
             }
             catch (Exception e)
