@@ -30,16 +30,6 @@
         {
             this.SuspendLayout();
             // 
-
-            // comboBox1
-            // 
-            //this.comboBox1.FormattingEnabled = true;
-            //this.comboBox1.Location = new System.Drawing.Point(219, 129);
-            //this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            //this.comboBox1.Name = "comboBox1";
-            //this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            //this.comboBox1.TabIndex = 0;
-            // 
             // ExpedienteMatrimonial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
