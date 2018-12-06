@@ -15,6 +15,17 @@ namespace ProyectoArquidiocesis
         public ExpedienteMatrimonial()
         {
             InitializeComponent();
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExpedienteMatrimonial_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

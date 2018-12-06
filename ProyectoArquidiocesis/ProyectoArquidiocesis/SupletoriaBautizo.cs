@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace ProyectoArquidiocesis
 {
+
     public partial class SupletoriaBautizo : MaterialSkin.Controls.MaterialForm
     {
+       
+
         public SupletoriaBautizo()
         {
             InitializeComponent();
+           
+        }
+
+        private void SupletoriaBautizo_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

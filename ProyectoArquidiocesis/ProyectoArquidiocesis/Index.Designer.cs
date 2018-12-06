@@ -132,10 +132,10 @@
             this.materialFlatButton1.Text = "Archivos Guardados";
             this.materialFlatButton1.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // Index
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ProyectoArquidiocesis.Properties.Resources.background_3246124_1920;
             this.ClientSize = new System.Drawing.Size(600, 366);
@@ -143,7 +143,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.Name = "Index";
             this.Text = "Arquidiócesis de Guatemala";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

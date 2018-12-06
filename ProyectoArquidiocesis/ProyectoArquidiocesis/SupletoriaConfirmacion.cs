@@ -16,5 +16,10 @@ namespace ProyectoArquidiocesis
         {
             InitializeComponent();
         }
+
+        private void SupletoriaConfirmacion_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

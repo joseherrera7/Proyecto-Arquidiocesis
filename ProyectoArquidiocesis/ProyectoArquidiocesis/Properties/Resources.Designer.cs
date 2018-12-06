@@ -73,6 +73,36 @@ namespace ProyectoArquidiocesis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SUPLETORIA_DE_CONFIRMACIÓN_1 {
+            get {
+                object obj = ResourceManager.GetObject("SUPLETORIA DE CONFIRMACIÓN-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SUPLETORIA_DE_CONFIRMACIÓN_1_opt {
+            get {
+                object obj = ResourceManager.GetObject("SUPLETORIA DE CONFIRMACIÓN-1_opt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SUPLETORIA_DE_CONFIRMACIÓN_11 {
+            get {
+                object obj = ResourceManager.GetObject("SUPLETORIA DE CONFIRMACIÓN-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap unnamed {
             get {
                 object obj = ResourceManager.GetObject("unnamed", resourceCulture);
