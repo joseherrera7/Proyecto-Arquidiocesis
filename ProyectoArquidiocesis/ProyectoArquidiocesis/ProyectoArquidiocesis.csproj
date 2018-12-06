@@ -135,5 +135,23 @@
   <ItemGroup>
     <None Include="Resources\SUPLETORIA DE CONFIRMACIÓN-1_opt.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfirmacionNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmacion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MatrimonioImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaautismoPNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaautismoPNG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BaautismoPNG2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

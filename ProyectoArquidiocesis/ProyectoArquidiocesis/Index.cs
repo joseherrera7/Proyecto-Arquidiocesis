@@ -5,9 +5,15 @@ namespace ProyectoArquidiocesis
 {
     public partial class Index : MaterialSkin.Controls.MaterialForm
     {
+        ExpedienteMatrimonial expedienteMatrimonial;
+        SupletoriaBautizo supletoriaBautizo;
+        SupletoriaConfirmacion supletoriaConfirmacion;
         public Index()
         {
             InitializeComponent();
+            expedienteMatrimonial = new ExpedienteMatrimonial();
+            supletoriaBautizo = new SupletoriaBautizo();
+            supletoriaConfirmacion = new SupletoriaConfirmacion();
         }
 
         private void BtnSupletoriaConfirmacion_Click(object sender, EventArgs e)
@@ -22,21 +28,48 @@ namespace ProyectoArquidiocesis
 
         private void BtnExpedienteMatrimonial_Click(object sender, EventArgs e)
         {
-            ExpedienteMatrimonial expedienteMatrimonial = new ExpedienteMatrimonial();
-            expedienteMatrimonial.Show();
-            
+            if (expedienteMatrimonial.IsDisposed)
+            {
+                expedienteMatrimonial = new ExpedienteMatrimonial();
+                expedienteMatrimonial.Show();
+            }
+            else
+            {
+                expedienteMatrimonial.Show();
+                expedienteMatrimonial.Activate();
+            }
+
+
         }
 
         private void BtnSupletoriaBautizo_Click(object sender, EventArgs e)
         {
-            SupletoriaBautizo supletoriaBautizo = new SupletoriaBautizo();
-            supletoriaBautizo.Show();
+            if (supletoriaBautizo.IsDisposed)
+            {
+                supletoriaBautizo = new SupletoriaBautizo();
+                supletoriaBautizo.Show();
+            }
+            else
+            {
+                supletoriaBautizo.Show();
+                supletoriaBautizo.Activate();
+            }
+
+
         }
 
         private void BtnSupletoriaConfirmacion_Click_1(object sender, EventArgs e)
         {
-            SupletoriaConfirmacion supletoriaConfirmacion = new SupletoriaConfirmacion();
-            supletoriaConfirmacion.Show();
+            if (supletoriaConfirmacion.IsDisposed)
+            {
+                supletoriaConfirmacion = new SupletoriaConfirmacion();
+                supletoriaConfirmacion.Show();
+            }
+            else
+            {
+                supletoriaConfirmacion.Show();
+                supletoriaConfirmacion.Activate();
+            }
         }
     }
 }

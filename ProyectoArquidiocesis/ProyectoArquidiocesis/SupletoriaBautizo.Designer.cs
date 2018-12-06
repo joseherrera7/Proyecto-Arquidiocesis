@@ -38,29 +38,34 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1, 63);
+            this.panel1.Location = new System.Drawing.Point(1, 79);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(815, 396);
+            this.panel1.Size = new System.Drawing.Size(1280, 800);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::ProyectoArquidiocesis.Properties.Resources.SUPLETORIA_DE_CONFIRMACIÓN_1_opt;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Image = global::ProyectoArquidiocesis.Properties.Resources.BaautismoPNG2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(790, 1042);
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 1400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // SupletoriaBautizo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(817, 450);
+            this.ClientSize = new System.Drawing.Size(1280, 950);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "SupletoriaBautizo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supletoria de Bautizo";
             this.Load += new System.EventHandler(this.SupletoriaBautizo_Load);
             this.panel1.ResumeLayout(false);
