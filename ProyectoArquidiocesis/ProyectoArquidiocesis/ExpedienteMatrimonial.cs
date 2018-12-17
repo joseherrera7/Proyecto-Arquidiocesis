@@ -32,5 +32,15 @@ namespace ProyectoArquidiocesis
         {
             this.Close();
         }
+
+        private void btnimprimirDoc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialSingleLineTextField11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
