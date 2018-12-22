@@ -21,5 +21,15 @@ namespace ProyectoArquidiocesis
         {
             
         }
+
+        private void materialSingleLineTextField1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialSingleLineTextField7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
