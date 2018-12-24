@@ -42,5 +42,85 @@ namespace ProyectoArquidiocesis
         {
 
         }
+
+        private void materialSingleLineTextField1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FolioConfirmacionNovio_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void AceptoLaIniciacionCristianaNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LibroBautismoNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ParroquiaConfirmacionNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FolioBautismoNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PartidaBautismoNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ParroquiaQueAsisteNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompletoLaIniciacionCristianaNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LibroConfirmacionNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FeligresNovio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialSingleLineTextField28_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
