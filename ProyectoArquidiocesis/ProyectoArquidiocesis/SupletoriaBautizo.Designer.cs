@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt18Fecha = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txt17Observaciones = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txt5Edad = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txt13Edad = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt16Certeza = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt15Padrinos = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt14ParroquiaConfir = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -44,10 +47,10 @@
             this.txt3Motivo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt2Bautizado = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt1Parroquia = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txt13Edad = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txt5Edad = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txt17Observaciones = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txt18Fecha = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtNotario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +58,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.txtNotario);
             this.panel1.Controls.Add(this.txt18Fecha);
             this.panel1.Controls.Add(this.txt17Observaciones);
             this.panel1.Controls.Add(this.txt5Edad);
@@ -79,17 +83,81 @@
             this.panel1.Size = new System.Drawing.Size(1024, 640);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox1
+            // txt18Fecha
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::ProyectoArquidiocesis.Properties.Resources.BaautismoPNG2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 1400);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.txt18Fecha.Depth = 0;
+            this.txt18Fecha.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt18Fecha.Hint = "";
+            this.txt18Fecha.Location = new System.Drawing.Point(126, 1213);
+            this.txt18Fecha.MaxLength = 32767;
+            this.txt18Fecha.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt18Fecha.Name = "txt18Fecha";
+            this.txt18Fecha.PasswordChar = '\0';
+            this.txt18Fecha.SelectedText = "";
+            this.txt18Fecha.SelectionLength = 0;
+            this.txt18Fecha.SelectionStart = 0;
+            this.txt18Fecha.Size = new System.Drawing.Size(810, 23);
+            this.txt18Fecha.TabIndex = 59;
+            this.txt18Fecha.TabStop = false;
+            this.txt18Fecha.UseSystemPasswordChar = false;
+            this.txt18Fecha.Click += new System.EventHandler(this.txt18Fecha_Click);
+            // 
+            // txt17Observaciones
+            // 
+            this.txt17Observaciones.Depth = 0;
+            this.txt17Observaciones.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt17Observaciones.Hint = "";
+            this.txt17Observaciones.Location = new System.Drawing.Point(206, 1182);
+            this.txt17Observaciones.MaxLength = 32767;
+            this.txt17Observaciones.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt17Observaciones.Name = "txt17Observaciones";
+            this.txt17Observaciones.PasswordChar = '\0';
+            this.txt17Observaciones.SelectedText = "";
+            this.txt17Observaciones.SelectionLength = 0;
+            this.txt17Observaciones.SelectionStart = 0;
+            this.txt17Observaciones.Size = new System.Drawing.Size(730, 23);
+            this.txt17Observaciones.TabIndex = 58;
+            this.txt17Observaciones.TabStop = false;
+            this.txt17Observaciones.UseSystemPasswordChar = false;
+            this.txt17Observaciones.Click += new System.EventHandler(this.txt17Observaciones_Click);
+            // 
+            // txt5Edad
+            // 
+            this.txt5Edad.Depth = 0;
+            this.txt5Edad.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt5Edad.Hint = "";
+            this.txt5Edad.Location = new System.Drawing.Point(87, 758);
+            this.txt5Edad.MaxLength = 32767;
+            this.txt5Edad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt5Edad.Name = "txt5Edad";
+            this.txt5Edad.PasswordChar = '\0';
+            this.txt5Edad.SelectedText = "";
+            this.txt5Edad.SelectionLength = 0;
+            this.txt5Edad.SelectionStart = 0;
+            this.txt5Edad.Size = new System.Drawing.Size(121, 23);
+            this.txt5Edad.TabIndex = 57;
+            this.txt5Edad.TabStop = false;
+            this.txt5Edad.UseSystemPasswordChar = false;
+            this.txt5Edad.Click += new System.EventHandler(this.txt5Edad_Click);
+            // 
+            // txt13Edad
+            // 
+            this.txt13Edad.Depth = 0;
+            this.txt13Edad.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt13Edad.Hint = "";
+            this.txt13Edad.Location = new System.Drawing.Point(250, 953);
+            this.txt13Edad.MaxLength = 32767;
+            this.txt13Edad.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txt13Edad.Name = "txt13Edad";
+            this.txt13Edad.PasswordChar = '\0';
+            this.txt13Edad.SelectedText = "";
+            this.txt13Edad.SelectionLength = 0;
+            this.txt13Edad.SelectionStart = 0;
+            this.txt13Edad.Size = new System.Drawing.Size(325, 23);
+            this.txt13Edad.TabIndex = 56;
+            this.txt13Edad.TabStop = false;
+            this.txt13Edad.UseSystemPasswordChar = false;
+            this.txt13Edad.Click += new System.EventHandler(this.txt13Edad_Click);
             // 
             // txt16Certeza
             // 
@@ -357,87 +425,64 @@
             this.txt1Parroquia.UseSystemPasswordChar = false;
             this.txt1Parroquia.Click += new System.EventHandler(this.txt1Parroquia_Click);
             // 
-            // txt13Edad
+            // pictureBox1
             // 
-            this.txt13Edad.Depth = 0;
-            this.txt13Edad.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt13Edad.Hint = "";
-            this.txt13Edad.Location = new System.Drawing.Point(250, 953);
-            this.txt13Edad.MaxLength = 32767;
-            this.txt13Edad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt13Edad.Name = "txt13Edad";
-            this.txt13Edad.PasswordChar = '\0';
-            this.txt13Edad.SelectedText = "";
-            this.txt13Edad.SelectionLength = 0;
-            this.txt13Edad.SelectionStart = 0;
-            this.txt13Edad.Size = new System.Drawing.Size(325, 23);
-            this.txt13Edad.TabIndex = 56;
-            this.txt13Edad.TabStop = false;
-            this.txt13Edad.UseSystemPasswordChar = false;
-            this.txt13Edad.Click += new System.EventHandler(this.txt13Edad_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::ProyectoArquidiocesis.Properties.Resources.BaautismoPNG2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 1400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txt5Edad
+            // button1
             // 
-            this.txt5Edad.Depth = 0;
-            this.txt5Edad.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt5Edad.Hint = "";
-            this.txt5Edad.Location = new System.Drawing.Point(87, 758);
-            this.txt5Edad.MaxLength = 32767;
-            this.txt5Edad.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt5Edad.Name = "txt5Edad";
-            this.txt5Edad.PasswordChar = '\0';
-            this.txt5Edad.SelectedText = "";
-            this.txt5Edad.SelectionLength = 0;
-            this.txt5Edad.SelectionStart = 0;
-            this.txt5Edad.Size = new System.Drawing.Size(121, 23);
-            this.txt5Edad.TabIndex = 57;
-            this.txt5Edad.TabStop = false;
-            this.txt5Edad.UseSystemPasswordChar = false;
-            this.txt5Edad.Click += new System.EventHandler(this.txt5Edad_Click);
+            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(264, 725);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 42);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "IMPRIMIR";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // txt17Observaciones
+            // btnGuardar
             // 
-            this.txt17Observaciones.Depth = 0;
-            this.txt17Observaciones.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt17Observaciones.Hint = "";
-            this.txt17Observaciones.Location = new System.Drawing.Point(206, 1182);
-            this.txt17Observaciones.MaxLength = 32767;
-            this.txt17Observaciones.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt17Observaciones.Name = "txt17Observaciones";
-            this.txt17Observaciones.PasswordChar = '\0';
-            this.txt17Observaciones.SelectedText = "";
-            this.txt17Observaciones.SelectionLength = 0;
-            this.txt17Observaciones.SelectionStart = 0;
-            this.txt17Observaciones.Size = new System.Drawing.Size(730, 23);
-            this.txt17Observaciones.TabIndex = 58;
-            this.txt17Observaciones.TabStop = false;
-            this.txt17Observaciones.UseSystemPasswordChar = false;
-            this.txt17Observaciones.Click += new System.EventHandler(this.txt17Observaciones_Click);
+            this.btnGuardar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(538, 725);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(181, 42);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txt18Fecha
+            // txtNotario
             // 
-            this.txt18Fecha.Depth = 0;
-            this.txt18Fecha.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt18Fecha.Hint = "";
-            this.txt18Fecha.Location = new System.Drawing.Point(126, 1213);
-            this.txt18Fecha.MaxLength = 32767;
-            this.txt18Fecha.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txt18Fecha.Name = "txt18Fecha";
-            this.txt18Fecha.PasswordChar = '\0';
-            this.txt18Fecha.SelectedText = "";
-            this.txt18Fecha.SelectionLength = 0;
-            this.txt18Fecha.SelectionStart = 0;
-            this.txt18Fecha.Size = new System.Drawing.Size(810, 23);
-            this.txt18Fecha.TabIndex = 59;
-            this.txt18Fecha.TabStop = false;
-            this.txt18Fecha.UseSystemPasswordChar = false;
-            this.txt18Fecha.Click += new System.EventHandler(this.txt18Fecha_Click);
+            this.txtNotario.Depth = 0;
+            this.txtNotario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotario.Hint = "";
+            this.txtNotario.Location = new System.Drawing.Point(263, 560);
+            this.txtNotario.MaxLength = 32767;
+            this.txtNotario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNotario.Name = "txtNotario";
+            this.txtNotario.PasswordChar = '\0';
+            this.txtNotario.SelectedText = "";
+            this.txtNotario.SelectionLength = 0;
+            this.txtNotario.SelectionStart = 0;
+            this.txtNotario.Size = new System.Drawing.Size(469, 23);
+            this.txtNotario.TabIndex = 60;
+            this.txtNotario.TabStop = false;
+            this.txtNotario.UseSystemPasswordChar = false;
             // 
             // SupletoriaBautizo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1024, 707);
+            this.ClientSize = new System.Drawing.Size(1024, 800);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "SupletoriaBautizo";
@@ -472,5 +517,8 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txt13Edad;
         private MaterialSkin.Controls.MaterialSingleLineTextField txt18Fecha;
         private MaterialSkin.Controls.MaterialSingleLineTextField txt17Observaciones;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGuardar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNotario;
     }
 }

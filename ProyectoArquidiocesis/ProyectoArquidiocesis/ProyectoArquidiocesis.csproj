@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArchivosGuardados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchivosGuardados.Designer.cs">
+      <DependentUpon>ArchivosGuardados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\ConsultaSQL.cs" />
     <Compile Include="ExpedienteMatrimonial.cs">
@@ -84,6 +90,9 @@
     <Compile Include="SupletoriaConfirmacion.Designer.cs">
       <DependentUpon>SupletoriaConfirmacion.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ArchivosGuardados.resx">
+      <DependentUpon>ArchivosGuardados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExpedienteMatrimonial.resx">
       <DependentUpon>ExpedienteMatrimonial.cs</DependentUpon>
     </EmbeddedResource>

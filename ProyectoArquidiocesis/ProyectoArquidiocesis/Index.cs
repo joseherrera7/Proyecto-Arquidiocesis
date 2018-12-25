@@ -8,12 +8,14 @@ namespace ProyectoArquidiocesis
         ExpedienteMatrimonial expedienteMatrimonial;
         SupletoriaBautizo supletoriaBautizo;
         SupletoriaConfirmacion supletoriaConfirmacion;
+        ArchivosGuardados archivos;
         public Index()
         {
             InitializeComponent();
             expedienteMatrimonial = new ExpedienteMatrimonial();
             supletoriaBautizo = new SupletoriaBautizo();
             supletoriaConfirmacion = new SupletoriaConfirmacion();
+            archivos = new ArchivosGuardados();
         }
 
         private void BtnSupletoriaConfirmacion_Click(object sender, EventArgs e)
@@ -69,6 +71,20 @@ namespace ProyectoArquidiocesis
             {
                 supletoriaConfirmacion.Show();
                 supletoriaConfirmacion.Activate();
+            }
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (archivos.IsDisposed)
+            {
+                archivos = new ArchivosGuardados();
+                archivos.Show();
+            }
+            else
+            {
+                archivos.Show();
+                archivos.Activate();
             }
         }
     }
