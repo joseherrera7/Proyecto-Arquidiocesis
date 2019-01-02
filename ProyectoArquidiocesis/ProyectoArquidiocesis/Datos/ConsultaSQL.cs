@@ -61,7 +61,7 @@ namespace ProyectoArquidiocesis.Datos
             }
         }
 
-        public void NuevoBautismo(string fecha, string notario, string bautizado, string urlDoc, string hashcode)
+        public void NuevoBautismo(string id, string fecha, string notario, string bautizado, string urlDoc, string hashcode)
         {
             //crear un objeto conexion
             MySqlConnection conectar = Conexion.getConexion();
@@ -81,10 +81,10 @@ namespace ProyectoArquidiocesis.Datos
                 //Pondremos tipo text y enviar sql
                 comando.CommandType = System.Data.CommandType.Text;
 
-                comando.CommandText = "INSERT INTO BAUTISMO(fecha, notario, bautizado, urlDoc, hashcode) VALUES(@b, @c, @d, @e, @f);";
+                comando.CommandText = "INSERT INTO BAUTISMO VALUES(@a, @b, @c, @d, @e, @f);";
 
                 //Agregar los parametros
-                //comando.Parameters.AddWithValue("@a", id);
+                comando.Parameters.AddWithValue("@a", id);
                 comando.Parameters.AddWithValue("@b", fecha);
                 comando.Parameters.AddWithValue("@c", notario);
                 comando.Parameters.AddWithValue("@d", bautizado);
@@ -110,7 +110,7 @@ namespace ProyectoArquidiocesis.Datos
             }
         }
 
-        public void NuevaConfirmacion(string fecha, string notario, string confirmado, string urlDoc, string hashcode)
+        public void NuevaConfirmacion(string id, string fecha, string notario, string confirmado, string urlDoc, string hashcode)
         {
             //crear un objeto conexion
             MySqlConnection conectar = Conexion.getConexion();
@@ -130,10 +130,10 @@ namespace ProyectoArquidiocesis.Datos
                 //Pondremos tipo text y enviar sql
                 comando.CommandType = System.Data.CommandType.Text;
 
-                comando.CommandText = "INSERT INTO CONFIRMACION(fecha, notario, confirmado, urlDoc, hashcode) VALUES(@b, @c, @d, @e, @f);";
+                comando.CommandText = "INSERT INTO CONFIRMACION VALUES(@a, @b, @c, @d, @e, @f);";
 
                 //Agregar los parametros
-                //comando.Parameters.AddWithValue("@a", id);
+                comando.Parameters.AddWithValue("@a", id);
                 comando.Parameters.AddWithValue("@b", fecha);
                 comando.Parameters.AddWithValue("@c", notario);
                 comando.Parameters.AddWithValue("@d", confirmado);

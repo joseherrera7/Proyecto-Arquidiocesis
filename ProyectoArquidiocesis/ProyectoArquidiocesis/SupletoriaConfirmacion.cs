@@ -1,4 +1,5 @@
-﻿using ProyectoArquidiocesis.Datos;
+﻿using MySql.Data.MySqlClient;
+using ProyectoArquidiocesis.Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,74 @@ namespace ProyectoArquidiocesis
 
         private void SupletoriaConfirmacion_Load(object sender, EventArgs e)
         {
-            
+            ReLoad();
+        }
+
+        public void ReLoad()
+        {
+            lblCodigoC.Text = "";
+            MySqlConnection conectar = Conexion.getConexion();
+
+            try
+            {
+                //Abrir conexion
+                conectar.Open();
+
+                //crear objeto de tipo MySqlCommand
+
+                String script = "SELECT COUNT(id) FROM confirmacion;";
+
+                MySqlCommand comando = new MySqlCommand(script, conectar);
+
+                try
+                {
+                    string contador = (comando.ExecuteScalar()).ToString();
+                    int cont = Int32.Parse(contador) + 1;
+
+                    if (cont < 10)
+                    {
+                        lblCodigoC.Text = "C000000" + cont;
+                    }
+                    else if (cont < 100)
+                    {
+                        lblCodigoC.Text = "C00000" + cont;
+                    }
+                    else if (cont < 1000)
+                    {
+                        lblCodigoC.Text = "C0000" + cont;
+                    }
+                    else if (cont < 10000)
+                    {
+                        lblCodigoC.Text = "C000" + cont;
+                    }
+                    else if (cont < 100000)
+                    {
+                        lblCodigoC.Text = "C00" + cont;
+                    }
+                    else if (cont < 1000000)
+                    {
+                        lblCodigoC.Text = "C0" + cont;
+                    }
+                    else if (cont < 10000000)
+                    {
+                        lblCodigoC.Text = "C" + cont;
+                    }
+                    else
+                    {
+                        lblCodigoC.Text = "Error";
+                    }
+                    conectar.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Entro catch1 Contador, " + ex.ToString());
+                    conectar.Close();
+                }
+            }
+            catch (Exception exx)
+            {
+                Console.WriteLine("Entro catch2 PASS, " + exx.ToString());
+            }
         }
 
         private void materialSingleLineTextField1_Click(object sender, EventArgs e)
@@ -40,6 +108,7 @@ namespace ProyectoArquidiocesis
             {
                 DateTime today = DateTime.Today;
                 //obtener los datos
+                string id = lblCodigoC.Text;
                 string fecha = today.ToString("d");
                 string notario = txtNotario.Text;
                 string confirmado = txt2Confirmado.Text;
@@ -59,11 +128,10 @@ namespace ProyectoArquidiocesis
                 }
                 else
                 {
-
-                    insercion.NuevaConfirmacion(fecha, notario, confirmado, urldoc, hashcode);
+                    insercion.NuevaConfirmacion(id, fecha, notario, confirmado, urldoc, hashcode);
                     MessageBox.Show(null, "Supletoria de Confirmación creada exitosamente", "Supletoria Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ReLoad();
                     limpiar();
-
                 }
             }
             catch
