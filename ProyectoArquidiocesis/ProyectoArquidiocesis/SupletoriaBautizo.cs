@@ -1,4 +1,5 @@
-﻿using ProyectoArquidiocesis.Datos;
+﻿using MySql.Data.MySqlClient;
+using ProyectoArquidiocesis.Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,15 +20,79 @@ namespace ProyectoArquidiocesis
         public SupletoriaBautizo()
         {
             InitializeComponent();
-            //txt1Parroquia.Scale.AutoScaleMode = 0;
-            
-            this.AutoScaleMode = 0;
            
         }
 
         private void SupletoriaBautizo_Load(object sender, EventArgs e)
         {
-            
+            ReLoad();
+        }
+
+        public void ReLoad()
+        {
+            lblCodigoB.Text = "";
+            MySqlConnection conectar = Conexion.getConexion();
+
+            try
+            {
+                //Abrir conexion
+                conectar.Open();
+
+                //crear objeto de tipo MySqlCommand
+
+                String script = "SELECT COUNT(id) FROM bautismo;";
+
+                MySqlCommand comando = new MySqlCommand(script, conectar);
+
+                try
+                {
+                    string contador = (comando.ExecuteScalar()).ToString();
+                    int cont = Int32.Parse(contador) + 1;
+
+                    if (cont < 10)
+                    {
+                        lblCodigoB.Text = "B000000" + cont;
+                    }
+                    else if (cont < 100)
+                    {
+                        lblCodigoB.Text = "B00000" + cont;
+                    }
+                    else if (cont < 1000)
+                    {
+                        lblCodigoB.Text = "B0000" + cont;
+                    }
+                    else if (cont < 10000)
+                    {
+                        lblCodigoB.Text = "B000" + cont;
+                    }
+                    else if (cont < 100000)
+                    {
+                        lblCodigoB.Text = "B00" + cont;
+                    }
+                    else if (cont < 1000000)
+                    {
+                        lblCodigoB.Text = "B0" + cont;
+                    }
+                    else if (cont < 10000000)
+                    {
+                        lblCodigoB.Text = "B" + cont;
+                    }
+                    else
+                    {
+                        lblCodigoB.Text = "Error";
+                    }
+                    conectar.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Entro catch1 Contador, " + ex.ToString());
+                    conectar.Close();
+                }
+            }
+            catch (Exception exx)
+            {
+                Console.WriteLine("Entro catch2 PASS, " + exx.ToString());
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -132,6 +197,7 @@ namespace ProyectoArquidiocesis
             {
                 DateTime today = DateTime.Today;
                 //obtener los datos
+                string id = lblCodigoB.Text;
                 string fecha = today.ToString("d");
                 string notario = txtNotario.Text;
                 string confirmado = txt2Bautizado.Text;
@@ -153,8 +219,9 @@ namespace ProyectoArquidiocesis
                 else
                 {
 
-                    insercion.NuevoBautismo(fecha, notario, confirmado, urldoc, hashcode);
+                    insercion.NuevoBautismo(id, fecha, notario, confirmado, urldoc, hashcode);
                     MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ReLoad();
                     limpiar();
 
                 }
@@ -184,6 +251,11 @@ namespace ProyectoArquidiocesis
             txt12Madre.Text = "";
             txt11Padre.Text = "";
             txt10Anio.Text = "";
+        }
+
+        private void lblCodigo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
