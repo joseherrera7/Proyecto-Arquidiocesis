@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCodigoC = new System.Windows.Forms.Label();
             this.txtNotario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt15Certeza = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt14Padrinos = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -47,8 +48,7 @@
             this.txt1Parroquia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblCodigoC = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 640);
             this.panel1.TabIndex = 2;
+            // 
+            // lblCodigoC
+            // 
+            this.lblCodigoC.AutoSize = true;
+            this.lblCodigoC.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCodigoC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoC.Location = new System.Drawing.Point(878, 35);
+            this.lblCodigoC.Name = "lblCodigoC";
+            this.lblCodigoC.Size = new System.Drawing.Size(83, 18);
+            this.lblCodigoC.TabIndex = 62;
+            this.lblCodigoC.Text = "C0000001";
             // 
             // txtNotario
             // 
@@ -391,33 +402,23 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // button1
+            // btnImprimir
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(254, 732);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 42);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "IMPRIMIR";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblCodigoC
-            // 
-            this.lblCodigoC.AutoSize = true;
-            this.lblCodigoC.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodigoC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoC.Location = new System.Drawing.Point(878, 35);
-            this.lblCodigoC.Name = "lblCodigoC";
-            this.lblCodigoC.Size = new System.Drawing.Size(83, 18);
-            this.lblCodigoC.TabIndex = 62;
-            this.lblCodigoC.Text = "C0000001";
+            this.btnImprimir.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Location = new System.Drawing.Point(235, 732);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(181, 42);
+            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.Text = "IMPRIMIR";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // SupletoriaConfirmacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1024, 800);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -452,8 +453,8 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txt3Motivo;
         private MaterialSkin.Controls.MaterialSingleLineTextField txt2Confirmado;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button button1;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNotario;
         private System.Windows.Forms.Label lblCodigoC;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }
