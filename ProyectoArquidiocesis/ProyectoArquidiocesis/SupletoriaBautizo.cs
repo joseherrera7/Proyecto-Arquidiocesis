@@ -248,7 +248,7 @@ namespace ProyectoArquidiocesis
             {
                 MessageBox.Show("Debe Imprimir previo a guardar definitivamente.", "Guardar Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
+            System.IO.File.Delete(newFile);
         }
         public void limpiar()
         {
