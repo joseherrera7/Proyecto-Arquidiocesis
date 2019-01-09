@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ProyectoArquidiocesis.Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,9 @@ namespace ProyectoArquidiocesis
 {
     public partial class ExpedienteMatrimonial : MaterialSkin.Controls.MaterialForm
     {
-        
+
+        public string newFile;
+        public bool impresion = false;
 
         public ExpedienteMatrimonial()
         {
@@ -34,7 +37,7 @@ namespace ProyectoArquidiocesis
 
                 //crear objeto de tipo MySqlCommand
 
-                String script = "SELECT COUNT(id) FROM expediente;";
+                String script = "SELECT COUNT(id) FROM MATRIMONIO;";
 
                 MySqlCommand comando = new MySqlCommand(script, conectar);
 
@@ -45,31 +48,31 @@ namespace ProyectoArquidiocesis
 
                     if (cont < 10)
                     {
-                        lblCodigoB.Text = "B000000" + cont;
+                        lblCodigoB.Text = "M000000" + cont;
                     }
                     else if (cont < 100)
                     {
-                        lblCodigoB.Text = "B00000" + cont;
+                        lblCodigoB.Text = "M00000" + cont;
                     }
                     else if (cont < 1000)
                     {
-                        lblCodigoB.Text = "B0000" + cont;
+                        lblCodigoB.Text = "M0000" + cont;
                     }
                     else if (cont < 10000)
                     {
-                        lblCodigoB.Text = "B000" + cont;
+                        lblCodigoB.Text = "M000" + cont;
                     }
                     else if (cont < 100000)
                     {
-                        lblCodigoB.Text = "B00" + cont;
+                        lblCodigoB.Text = "M00" + cont;
                     }
                     else if (cont < 1000000)
                     {
-                        lblCodigoB.Text = "B0" + cont;
+                        lblCodigoB.Text = "M0" + cont;
                     }
                     else if (cont < 10000000)
                     {
-                        lblCodigoB.Text = "B" + cont;
+                        lblCodigoB.Text = "M" + cont;
                     }
                     else
                     {
@@ -95,7 +98,6 @@ namespace ProyectoArquidiocesis
 
         private void ExpedienteMatrimonial_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void bntSalir_Click(object sender, EventArgs e)
@@ -106,12 +108,15 @@ namespace ProyectoArquidiocesis
         private void btnimprimirDoc_Click(object sender, EventArgs e)
         {
             string oldFile = "C:\\Archives\\EXPEDIENTE MATRIMONIAL FORMATO 2.docx";
-            string newFile = "C:\\Archives\\newFile.docx";
+            newFile = "C:\\Archives\\Matrimonio - "+lblCodigoB.Text+".docx";
             using (DocX document = DocX.Load(oldFile))
             {
                 
                 document.ReplaceText("___________NombreNovio___________", "  "+NombreNovio.Text+ "  ");
                 document.ReplaceText("___________NombreNovia___________ ", "  " + NombreNovia.Text + "  ");
+
+                document.ReplaceText("___________NombreNotario___________", "  " + txtNotario.Text + "  ");
+                
 
                 //datos del novio
                 document.ReplaceText("___nombrenovio __________________________________________________________________", NombreCompletoNovio.Text);
@@ -230,6 +235,7 @@ namespace ProyectoArquidiocesis
 
 
                 document.SaveAs(newFile);
+                impresion = true;
             }
 
         }
@@ -318,5 +324,64 @@ namespace ProyectoArquidiocesis
         {
 
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            if (impresion)
+            {
+                try
+                {
+                    DateTime today = DateTime.Today;
+                    //obtener los datos
+                    string id = lblCodigoB.Text;
+                    string fecha = today.ToString("d");
+                    string notario = txtNotario.Text;
+                    string novio = NombreCompletoNovio.Text;
+                    string novia = NombreCompletoNovia.Text;
+                    string urldoc = newFile;
+
+                    //Crear objeto tipo ConsultaSQL
+                    ConsultaSQL insercion = new ConsultaSQL();
+
+                    if (this.Controls.OfType<MaterialSkin.Controls.MaterialSingleLineTextField>().Any(t => string.IsNullOrEmpty(t.Text)))
+                    {
+                        MessageBox.Show(null, "Faltan campos por completar", "Supletoria Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        insercion.NuevoMatrimonio(id, fecha, notario, novio, novia, urldoc);
+                        MessageBox.Show(null, "Expediente Matrimonial creado exitosamente", "Expediente Matrimonial", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ReLoad();
+                        ClearTextBoxes();
+                    }
+                }
+                catch
+                {
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe Imprimir previo a guardar definitivamente.", "Guardar Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            //id, fecha, notario, confirmado, url doc, hashcode.
+ 
+        }
+            private void ClearTextBoxes()
+            {
+                Action<Control.ControlCollection> func = null;
+            func = (controls) =>
+                {
+                    foreach (Control control in controls)
+                        if (control is MaterialSkin.Controls.MaterialSingleLineTextField)
+                            (control as MaterialSkin.Controls.MaterialSingleLineTextField).Clear();
+                        else
+                            func(control.Controls);
+                };
+
+                func(Controls);
+            }
+        
+           
+ 
     }
 }

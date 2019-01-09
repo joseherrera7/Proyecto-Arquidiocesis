@@ -118,7 +118,6 @@ namespace ProyectoArquidiocesis
                 string notario = txtNotario.Text;
                 string confirmado = txt2Confirmado.Text;
                 string urldoc = "prueba";
-                string hashcode = "hashcode";
 
                 //Crear objeto tipo ConsultaSQL
                 ConsultaSQL insercion = new ConsultaSQL();
@@ -133,7 +132,7 @@ namespace ProyectoArquidiocesis
                 }
                 else
                 {
-                    insercion.NuevaConfirmacion(id, fecha, notario, confirmado, urldoc, hashcode);
+                    insercion.NuevaConfirmacion(id, fecha, notario, confirmado, urldoc);
                     MessageBox.Show(null, "Supletoria de Confirmación creada exitosamente", "Supletoria Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ReLoad();
                     limpiar();

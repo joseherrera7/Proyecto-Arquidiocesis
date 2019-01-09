@@ -228,7 +228,6 @@ namespace ProyectoArquidiocesis
                 string notario = txtNotario.Text;
                 string confirmado = txt2Bautizado.Text;
                 string urldoc = "prueba";
-                string hashcode = "hashcode";
 
                 //Crear objeto tipo ConsultaSQL
                 ConsultaSQL insercion = new ConsultaSQL();
@@ -245,7 +244,7 @@ namespace ProyectoArquidiocesis
                 else
                 {
 
-                    insercion.NuevoBautismo(id, fecha, notario, confirmado, urldoc, hashcode);
+                    insercion.NuevoBautismo(id, fecha, notario, confirmado, urldoc);
                     MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ReLoad();
                     limpiar();
