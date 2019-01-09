@@ -616,7 +616,8 @@ namespace ProyectoArquidiocesis
             {
                 MessageBox.Show("Debe Imprimir previo a guardar definitivamente.", "Guardar Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-                //id, fecha, notario, confirmado, url doc, hashcode.
+            //id, fecha, notario, confirmado, url doc, hashcode.
+            System.IO.File.Delete(newFile);
         }
  /*           private void ClearTextBoxes()
             {

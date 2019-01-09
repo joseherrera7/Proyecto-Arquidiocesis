@@ -169,6 +169,7 @@ namespace ProyectoArquidiocesis
             {
                 MessageBox.Show("Debe Imprimir previo a guardar definitivamente.", "Guardar Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            System.IO.File.Delete(newFile);
         }
         public void limpiar()
         {
@@ -201,7 +202,7 @@ namespace ProyectoArquidiocesis
     || txt14Padrinos.Text == "" || txt13Edad.Text == "" || txt12ParroquiaConfir.Text == ""
     || txt11Madre.Text == "" || txt10Padre.Text == "")
             {
-                MessageBox.Show(null, "Faltan campos por completar", "Supletoria Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+  MessageBox.Show(null, "Faltan campos por completar", "Supletoria Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else
@@ -213,25 +214,26 @@ namespace ProyectoArquidiocesis
                 using (DocX document = DocX.Load(oldFile))
                 {
 
-                    document.ReplaceText("_________________parroquia________________", txt1Parroquia.Text);
-                    document.ReplaceText("_________________________nombre_________________________________", txt2Confirmado.Text);
-                    document.ReplaceText("________________________motivo____________________", txt3Motivo.Text);
-                    document.ReplaceText("___________________________testigo__________________________________", txt4Testigo.Text);
-                    document.ReplaceText("__________________________direccion_________________________________________________________________________________________", txt5Domicilio.Text);
-                    document.ReplaceText("_________________________certeza______________________________________", txt6Juramento.Text);
-                    document.ReplaceText("___dia__", txt7Dia.Text);
-                    document.ReplaceText("________mes_______", txt8Mes.Text);
-                    document.ReplaceText("________año________________", txt9Anio.Text);
-                    document.ReplaceText("_________________________padre_______________________________", txt10Padre.Text);
-                    document.ReplaceText("_______________________________madre________________________________", txt11Madre.Text);
-                    document.ReplaceText("___________________parroquiaconfirmacion______________________________", txt12ParroquiaConfir.Text);
-                    document.ReplaceText("__edad___", txt13Edad.Text);
-                    document.ReplaceText("____________________________padrinos_______________________________________________________________________________________", txt14Padrinos.Text);
-                    document.ReplaceText("____________________________certeza2_______________________________________________________________________________", txt15Certeza.Text);
-                    document.ReplaceText("______notario____________", txtNotario.Text);
+                document.ReplaceText("_CODIGO_", lblCodigoC.Text);
+                document.ReplaceText("_________________parroquia________________", txt1Parroquia.Text);
+                document.ReplaceText("_________________________nombre_________________________________", txt2Confirmado.Text);
+                document.ReplaceText("________________________motivo____________________", txt3Motivo.Text);
+                document.ReplaceText("___________________________testigo__________________________________", txt4Testigo.Text);
+                document.ReplaceText("__________________________direccion_________________________________________________________________________________________", txt5Domicilio.Text);
+                document.ReplaceText("_________________________certeza______________________________________", txt6Juramento.Text);
+                document.ReplaceText("___dia__", txt7Dia.Text);
+                document.ReplaceText("________mes_______", txt8Mes.Text);
+                document.ReplaceText("________año________________", txt9Anio.Text);
+                document.ReplaceText("_________________________padre_______________________________", txt10Padre.Text);
+                document.ReplaceText("_______________________________madre________________________________", txt11Madre.Text);
+                document.ReplaceText("___________________parroquiaconfirmacion______________________________", txt12ParroquiaConfir.Text);
+                document.ReplaceText("__edad___", txt13Edad.Text);
+                document.ReplaceText("____________________________padrinos_______________________________________________________________________________________", txt14Padrinos.Text);
+                document.ReplaceText("____________________________certeza2_______________________________________________________________________________", txt15Certeza.Text);
+                document.ReplaceText("______notario____________", txtNotario.Text);
 
-                    document.SaveAs(newFile);                   
-                    impresion = true;
+                document.SaveAs(newFile);
+                impresion = true;
                 }
 
 
