@@ -19,7 +19,7 @@ namespace ProyectoArquidiocesis
 {
     public partial class SupletoriaConfirmacion : MaterialSkin.Controls.MaterialForm
     {
-
+        public string newFilePDF;
         public string newFile;
         public bool impresion = false;
 
@@ -110,32 +110,16 @@ namespace ProyectoArquidiocesis
         {
 
         }
-
+        public Microsoft.Office.Interop.Word.Document wordDocument { get; set; }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
             if (impresion)
             {
 
-                SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
-
-
-
-                if (p != null)
-                {
-                    string docxPath = newFile;
-                    string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
-
-
-                    // 2. Convert DOCX file to PDF file 
-                    if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
-                        System.Diagnostics.Process.Start(pdfPath);
-                    else
-                    {
-                        MessageBox.Show("Conversion failed!");
-
-                    }
-                }
+                Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+                wordDocument = appWord.Documents.Open(newFile);
+                wordDocument.ExportAsFixedFormat(newFilePDF, WdExportFormat.wdExportFormatPDF);
                 //id, fecha, notario, confirmado, url doc, hashcode.
                 try
                 {
@@ -203,6 +187,7 @@ namespace ProyectoArquidiocesis
 
             string oldFile = "C:\\Archives\\SUPLETORIA DE CONFIRMACIÓN.docx";
             newFile = "C:\\Archives\\Confirmacion - " + lblCodigoC.Text + ".docx";
+            newFilePDF = "C:\\Archives\\Confirmacion - " + lblCodigoC.Text + ".pdf";
             using (DocX document = DocX.Load(oldFile))
             {
 

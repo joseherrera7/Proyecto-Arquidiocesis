@@ -17,7 +17,7 @@ namespace ProyectoArquidiocesis
 {
     public partial class ExpedienteMatrimonial : MaterialSkin.Controls.MaterialForm
     {
-
+        public string newFilePDF;
         public string newFile;
         public bool impresion = false;
 
@@ -313,12 +313,13 @@ namespace ProyectoArquidiocesis
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
-            wordDocument = appWord.Documents.Open(@"C:\Archives\newFile.docx");
-            wordDocument.ExportAsFixedFormat(@"C:\Archives\newFile.pdf", WdExportFormat.wdExportFormatPDF);
+            
 
             if (impresion)
             {
+                Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+                wordDocument = appWord.Documents.Open(newFile);
+                wordDocument.ExportAsFixedFormat(newFilePDF, WdExportFormat.wdExportFormatPDF);
                 try
                 {
                     DateTime today = DateTime.Today;
