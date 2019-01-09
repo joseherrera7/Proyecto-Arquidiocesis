@@ -117,7 +117,8 @@ namespace ProyectoArquidiocesis
             newFile = "C:\\Archives\\Matrimonio - " + lblCodigoB.Text + ".pdf";
             using (DocX document = DocX.Load(oldFile))
             {
-                
+                document.ReplaceText("_CODIGO_", lblCodigoB.Text);
+
                 document.ReplaceText("___________NombreNovio___________", "  "+NombreNovio.Text+ "  ");
                 document.ReplaceText("___________NombreNovia___________ ", "  " + NombreNovia.Text + "  ");
 

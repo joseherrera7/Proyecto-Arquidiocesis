@@ -292,7 +292,7 @@ namespace ProyectoArquidiocesis
             newFilePDF = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".pdf";
             using (DocX document = DocX.Load(oldFile))
             {
-
+                document.ReplaceText("_CODIGO_", lblCodigoB.Text);
                 document.ReplaceText("________________parroquia________________________", txt1Parroquia.Text);
                 document.ReplaceText("______________________________bautizado____________________________________", txt2Bautizado.Text);
                 document.ReplaceText("______________________motivo_______________________", txt3Motivo.Text);

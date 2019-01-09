@@ -191,7 +191,7 @@ namespace ProyectoArquidiocesis
             newFilePDF = "C:\\Archives\\Confirmacion - " + lblCodigoC.Text + ".pdf";
             using (DocX document = DocX.Load(oldFile))
             {
-
+                document.ReplaceText("_CODIGO_", lblCodigoC.Text);
                 document.ReplaceText("_________________parroquia________________", txt1Parroquia.Text);
                 document.ReplaceText("_________________________nombre_________________________________", txt2Confirmado.Text);
                 document.ReplaceText("________________________motivo____________________", txt3Motivo.Text);
