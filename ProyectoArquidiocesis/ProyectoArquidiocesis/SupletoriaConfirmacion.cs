@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using Xceed.Words.NET;
 using System.IO;
 
+
 namespace ProyectoArquidiocesis
 {
     public partial class SupletoriaConfirmacion : MaterialSkin.Controls.MaterialForm

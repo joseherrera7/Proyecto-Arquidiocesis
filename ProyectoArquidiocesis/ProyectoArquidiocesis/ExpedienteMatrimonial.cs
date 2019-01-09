@@ -244,6 +244,24 @@ namespace ProyectoArquidiocesis
 
         }
 
+        void limpiar()
+        {
+            RazonesConocerContrayente4.Text = "";
+            TiempoCOnocerCOntrayente4.Text = "";
+            RazonesCOnocerContrayente3.Text = "";
+            TiempoConocerCOntrayente3.Text = "";
+            ProfesionTestigo2.Text = "";
+            TelefonoTestigo2.Text = "";
+            EdadTestigo2.Text = "";
+            DomilicioTestigo2.Text = "";
+            NacionalidadTestigo2.Text = "";
+            DPITestigo2.Text = "";
+            NombreTestigo2.Text = "";
+            RazonesDeConocerAlCOntrayente2.Text = "";
+            TiempoDeConocerAlContrayente2.Text = "";
+            RazonesDeConocerAlCOntrayente.Text = "";
+        }
+
         private void materialSingleLineTextField11_Click(object sender, EventArgs e)
         {
 
