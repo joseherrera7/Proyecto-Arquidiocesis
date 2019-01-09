@@ -203,45 +203,55 @@ namespace ProyectoArquidiocesis
 
             if (impresion)
             {
-                Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
-                wordDocument = appWord.Documents.Open(newFile);
-                wordDocument.ExportAsFixedFormat(newFilePDF, WdExportFormat.wdExportFormatPDF);
+                DialogResult resultado = MessageBox.Show("¿Segur@ que desea guardar los datos, no podrá editar los datos después de guardado.?", "Guardar Archivo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                //id, fecha, notario, bautizado, url doc, hashcode.
-                try
+                if (resultado == DialogResult.OK)
                 {
-                    DateTime today = DateTime.Today;
-                    //obtener los datos
-                    string id = lblCodigoB.Text;
-                    string fecha = today.ToString("d");
-                    string notario = txtNotario.Text;
-                    string confirmado = txt2Bautizado.Text;
-                    string urldoc = newFile;
 
-                    //Crear objeto tipo ConsultaSQL
-                    ConsultaSQL insercion = new ConsultaSQL();
+                    Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+                    wordDocument = appWord.Documents.Open(newFile);
+                    wordDocument.ExportAsFixedFormat(newFilePDF, WdExportFormat.wdExportFormatPDF);
 
-                    if (txtNotario.Text == "" || txt10Anio.Text == "" || txt11Padre.Text == "" || txt12Madre.Text == "" || txt13Edad.Text == "" ||
-                        txt14ParroquiaConfir.Text == "" || txt15Padrinos.Text == "" || txt16Certeza.Text == ""
-                        || txt17Observaciones.Text == "" || txt18Fecha.Text == "" || txt1Parroquia.Text == ""
-                        || txt2Bautizado.Text == "" || txt3Motivo.Text == "" || txt4Testigo.Text == ""
-                        || txt5Edad.Text == "" || txt6Domicilio.Text == "" || txt7Juramento.Text == "" || txt8Dia.Text == ""
-                        || txt9Mes.Text == "")
+                    //id, fecha, notario, bautizado, url doc, hashcode.
+                    try
                     {
-                        MessageBox.Show(null, "Faltan campos por completar", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DateTime today = DateTime.Today;
+                        //obtener los datos
+                        string id = lblCodigoB.Text;
+                        string fecha = today.ToString("d");
+                        string notario = txtNotario.Text;
+                        string confirmado = txt2Bautizado.Text;
+                        string urldoc = newFile.Replace(".docx", ".pdf");
+
+                        //Crear objeto tipo ConsultaSQL
+                        ConsultaSQL insercion = new ConsultaSQL();
+
+                        if (txtNotario.Text == "" || txt10Anio.Text == "" || txt11Padre.Text == "" || txt12Madre.Text == "" || txt13Edad.Text == "" ||
+                            txt14ParroquiaConfir.Text == "" || txt15Padrinos.Text == "" || txt16Certeza.Text == ""
+                            || txt17Observaciones.Text == "" || txt18Fecha.Text == "" || txt1Parroquia.Text == ""
+                            || txt2Bautizado.Text == "" || txt3Motivo.Text == "" || txt4Testigo.Text == ""
+                            || txt5Edad.Text == "" || txt6Domicilio.Text == "" || txt7Juramento.Text == "" || txt8Dia.Text == ""
+                            || txt9Mes.Text == "")
+                        {
+                            MessageBox.Show(null, "Faltan campos por completar", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+
+                            insercion.NuevoBautismo(id, fecha, notario, confirmado, urldoc);
+                            MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ReLoad();
+                            limpiar();
+
+                        }
                     }
-                    else
+                    catch
                     {
-
-                        insercion.NuevoBautismo(id, fecha, notario, confirmado, urldoc);
-                        MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ReLoad();
-                        limpiar();
-
                     }
                 }
-                catch
+                else
                 {
+
                 }
             }
             else
@@ -287,68 +297,81 @@ namespace ProyectoArquidiocesis
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string oldFile = "C:\\Archives\\SUPLETORIA DE BAUTISMO.docx";
-            newFile = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".docx";
-            newFilePDF = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".pdf";
-            using (DocX document = DocX.Load(oldFile))
+            if (txtNotario.Text == "" || txt10Anio.Text == "" || txt11Padre.Text == "" || txt12Madre.Text == "" || txt13Edad.Text == "" ||
+    txt14ParroquiaConfir.Text == "" || txt15Padrinos.Text == "" || txt16Certeza.Text == ""
+    || txt17Observaciones.Text == "" || txt18Fecha.Text == "" || txt1Parroquia.Text == ""
+    || txt2Bautizado.Text == "" || txt3Motivo.Text == "" || txt4Testigo.Text == ""
+    || txt5Edad.Text == "" || txt6Domicilio.Text == "" || txt7Juramento.Text == "" || txt8Dia.Text == ""
+    || txt9Mes.Text == "")
+            {
+                MessageBox.Show(null, "Faltan campos por completar", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
             {
 
-                document.ReplaceText("________________parroquia________________________", txt1Parroquia.Text);
-                document.ReplaceText("______________________________bautizado____________________________________", txt2Bautizado.Text);
-                document.ReplaceText("______________________motivo_______________________", txt3Motivo.Text);
-                document.ReplaceText("___________________________testigo___________________________________", txt4Testigo.Text);
-                document.ReplaceText("____edadtestigo____", txt5Edad.Text);
-                document.ReplaceText("____________________________direcciontestigo_______________________________________________________________________", txt6Domicilio.Text);
-                document.ReplaceText("_____________relacion_______________________", txt7Juramento.Text);
-                document.ReplaceText("__dia__", txt8Dia.Text);
-                document.ReplaceText("_______mes_________", txt9Mes.Text);
-                document.ReplaceText("___________año_________________", txt10Anio.Text);
-                document.ReplaceText("___________________________padre____________________________", txt11Padre.Text);
-                document.ReplaceText("_____________________________madre___________________________________", txt12Madre.Text);
-                document.ReplaceText("____________edad_____________", txt13Edad.Text);
-                document.ReplaceText("__________________________parroquiabautizo___________________________", txt14ParroquiaConfir.Text);
-                document.ReplaceText("_________________________Ppadrinos____________________________________________________________________", txt15Padrinos.Text);
-                document.ReplaceText("___________________________certeza____________________________________________________________", txt16Certeza.Text);
-                document.ReplaceText("________________________observaciones___________________", txt17Observaciones.Text);
-                document.ReplaceText("______________________________fecha________________________", txt18Fecha.Text);
-                document.ReplaceText("_________notario___________", txtNotario.Text);
+                string oldFile = "C:\\Archives\\SUPLETORIA DE BAUTISMO.docx";
+                newFile = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".docx";
+                newFilePDF = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".pdf";
+                using (DocX document = DocX.Load(oldFile))
+                {
+
+                    document.ReplaceText("________________parroquia________________________", txt1Parroquia.Text);
+                    document.ReplaceText("______________________________bautizado____________________________________", txt2Bautizado.Text);
+                    document.ReplaceText("______________________motivo_______________________", txt3Motivo.Text);
+                    document.ReplaceText("___________________________testigo___________________________________", txt4Testigo.Text);
+                    document.ReplaceText("____edadtestigo____", txt5Edad.Text);
+                    document.ReplaceText("____________________________direcciontestigo_______________________________________________________________________", txt6Domicilio.Text);
+                    document.ReplaceText("_____________relacion_______________________", txt7Juramento.Text);
+                    document.ReplaceText("__dia__", txt8Dia.Text);
+                    document.ReplaceText("_______mes_________", txt9Mes.Text);
+                    document.ReplaceText("___________año_________________", txt10Anio.Text);
+                    document.ReplaceText("___________________________padre____________________________", txt11Padre.Text);
+                    document.ReplaceText("_____________________________madre___________________________________", txt12Madre.Text);
+                    document.ReplaceText("____________edad_____________", txt13Edad.Text);
+                    document.ReplaceText("__________________________parroquiabautizo___________________________", txt14ParroquiaConfir.Text);
+                    document.ReplaceText("_________________________Ppadrinos____________________________________________________________________", txt15Padrinos.Text);
+                    document.ReplaceText("___________________________certeza____________________________________________________________", txt16Certeza.Text);
+                    document.ReplaceText("________________________observaciones___________________", txt17Observaciones.Text);
+                    document.ReplaceText("______________________________fecha________________________", txt18Fecha.Text);
+                    document.ReplaceText("_________notario___________", txtNotario.Text);
 
 
 
 
-                document.SaveAs(newFile);
-                impresion = true;
+                    document.SaveAs(newFile);
+                    impresion = true;
 
+                }
+
+                var ap = new Microsoft.Office.Interop.Word.Application();
+                Document doc = ap.Documents.Add(newFile);
+                //Document document = ap.Documents.Open(@"C:\Users\USER\Documents\prueba.docx");
+
+                //PrintDialog dialogPrint = new PrintDialog();
+
+                // ap.Visible = false;
+
+                PrintDialog pDialog = new PrintDialog();
+                if (pDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ap.ActivePrinter = pDialog.PrinterSettings.PrinterName;
+                    doc.PrintOut(); //this will also work: doc.PrintOut();
+                    doc.Close(SaveChanges: false);
+                    doc = null;
+                }
+
+
+                MessageBox.Show("Proceso de impresión iniciado.", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                // <EDIT to include Jason's suggestion>
+                //((Microsoft.Office.Interop.Word._Application)ap).Quit(SaveChanges: false);
+                // </EDIT>
+
+                // Original: 
+                ap.Quit(SaveChanges: false);
+                ap = null;
             }
-
-            var ap = new Microsoft.Office.Interop.Word.Application();
-            Document doc = ap.Documents.Add(newFile);
-            //Document document = ap.Documents.Open(@"C:\Users\USER\Documents\prueba.docx");
-
-            //PrintDialog dialogPrint = new PrintDialog();
-
-            // ap.Visible = false;
-
-            PrintDialog pDialog = new PrintDialog();
-            if (pDialog.ShowDialog() == DialogResult.OK)
-            {
-                ap.ActivePrinter = pDialog.PrinterSettings.PrinterName;
-                doc.PrintOut(); //this will also work: doc.PrintOut();
-                doc.Close(SaveChanges: false);
-                doc = null;
-            }
-
-
-            MessageBox.Show("Proceso de impresión iniciado.", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            // <EDIT to include Jason's suggestion>
-            //((Microsoft.Office.Interop.Word._Application)ap).Quit(SaveChanges: false);
-            // </EDIT>
-
-            // Original: 
-            ap.Quit(SaveChanges: false);
-            ap = null;
         }
     }
 }
