@@ -21,6 +21,7 @@ namespace ProyectoArquidiocesis
     {
 
         public string newFile;
+        public string newFilePDF;
         public bool impresion = false;
 
         public SupletoriaBautizo()
@@ -195,30 +196,16 @@ namespace ProyectoArquidiocesis
         {
 
         }
+        public Microsoft.Office.Interop.Word.Document wordDocument { get; set; }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
             if (impresion)
             {
-                SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
-
-
-
-                if (p != null)
-                {
-                    string docxPath = @"C:\Archives\newFile.docx";
-                    string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
-
-
-                    // 2. Convert DOCX file to PDF file 
-                    if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
-                        System.Diagnostics.Process.Start(pdfPath);
-                    else
-                    {
-                        MessageBox.Show("Conversion failed!");
-                    }
-                }
+                Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+                wordDocument = appWord.Documents.Open(newFile);
+                wordDocument.ExportAsFixedFormat(newFilePDF, WdExportFormat.wdExportFormatPDF);
 
                 //id, fecha, notario, bautizado, url doc, hashcode.
                 try
@@ -295,13 +282,19 @@ namespace ProyectoArquidiocesis
         //boton imprimir!
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             string oldFile = "C:\\Archives\\SUPLETORIA DE BAUTISMO.docx";
             newFile = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".docx";
+            newFilePDF = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".pdf";
             using (DocX document = DocX.Load(oldFile))
             {
 
-                document.ReplaceText("________________parroquia________________________",  txt1Parroquia.Text );
-                document.ReplaceText("______________________________bautizado____________________________________",  txt2Bautizado.Text );
+                document.ReplaceText("________________parroquia________________________", txt1Parroquia.Text);
+                document.ReplaceText("______________________________bautizado____________________________________", txt2Bautizado.Text);
                 document.ReplaceText("______________________motivo_______________________", txt3Motivo.Text);
                 document.ReplaceText("___________________________testigo___________________________________", txt4Testigo.Text);
                 document.ReplaceText("____edadtestigo____", txt5Edad.Text);
@@ -319,7 +312,7 @@ namespace ProyectoArquidiocesis
                 document.ReplaceText("________________________observaciones___________________", txt17Observaciones.Text);
                 document.ReplaceText("______________________________fecha________________________", txt18Fecha.Text);
                 document.ReplaceText("_________notario___________", txtNotario.Text);
-                
+
 
 
 
@@ -357,6 +350,5 @@ namespace ProyectoArquidiocesis
             ap.Quit(SaveChanges: false);
             ap = null;
         }
-
     }
 }

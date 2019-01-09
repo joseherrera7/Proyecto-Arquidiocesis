@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.Office.Interop.Word;
+using MySql.Data.MySqlClient;
 using ProyectoArquidiocesis.Datos;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace ProyectoArquidiocesis
 {
     public partial class ExpedienteMatrimonial : MaterialSkin.Controls.MaterialForm
     {
-
+        public string newFilePDF;
         public string newFile;
         public bool impresion = false;
 
@@ -113,6 +114,7 @@ namespace ProyectoArquidiocesis
             }
             string oldFile = "C:\\Archives\\EXPEDIENTE MATRIMONIAL FORMATO 2.docx";
             newFile = "C:\\Archives\\Matrimonio - "+lblCodigoB.Text+".docx";
+            newFile = "C:\\Archives\\Matrimonio - " + lblCodigoB.Text + ".pdf";
             using (DocX document = DocX.Load(oldFile))
             {
                 
@@ -326,31 +328,17 @@ namespace ProyectoArquidiocesis
         {
 
         }
+        public Microsoft.Office.Interop.Word.Document wordDocument { get; set; }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            
 
             if (impresion)
             {
-                SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
-
-
-
-                if (p != null)
-                {
-                    string docxPath = @"C:\Archives\Matrimonio - " + lblCodigoB.Text + ".docx";
-                    string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
-
-
-                    // 2. Convert DOCX file to PDF file 
-                    if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
-                        System.Diagnostics.Process.Start(pdfPath);
-                    else
-                    {
-                        MessageBox.Show("Conversion failed!");
-                    }
-                }
-
+                Microsoft.Office.Interop.Word.Application appWord = new Microsoft.Office.Interop.Word.Application();
+                wordDocument = appWord.Documents.Open(newFile);
+                wordDocument.ExportAsFixedFormat(newFilePDF, WdExportFormat.wdExportFormatPDF);
                 try
                 {
                     DateTime today = DateTime.Today;
