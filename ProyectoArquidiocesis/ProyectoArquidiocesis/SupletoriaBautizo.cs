@@ -1,13 +1,15 @@
 ﻿using MySql.Data.MySqlClient;
 using ProyectoArquidiocesis.Datos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Office.Interop.Word;
+
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
 using Xceed.Words.NET;
 
@@ -290,7 +292,37 @@ namespace ProyectoArquidiocesis
 
 
                 document.SaveAs(newFile);
+
             }
+
+            var ap = new Microsoft.Office.Interop.Word.Application();
+            Document doc = ap.Documents.Add(@"C:\Archives\newFile.docx");
+            //Document document = ap.Documents.Open(@"C:\Users\USER\Documents\prueba.docx");
+
+            //PrintDialog dialogPrint = new PrintDialog();
+
+            // ap.Visible = false;
+
+            PrintDialog pDialog = new PrintDialog();
+            if (pDialog.ShowDialog() == DialogResult.OK)
+            {
+                ap.ActivePrinter = pDialog.PrinterSettings.PrinterName;
+                doc.PrintOut(); //this will also work: doc.PrintOut();
+                doc.Close(SaveChanges: false);
+                doc = null;
+            }
+
+
+            MessageBox.Show("Proceso de impresión iniciado.", "Impresión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            // <EDIT to include Jason's suggestion>
+            //((Microsoft.Office.Interop.Word._Application)ap).Quit(SaveChanges: false);
+            // </EDIT>
+
+            // Original: 
+            ap.Quit(SaveChanges: false);
+            ap = null;
         }
 
     }
