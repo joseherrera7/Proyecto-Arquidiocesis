@@ -140,6 +140,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bntSalir = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.lblCodigoB = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -147,6 +148,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.lblCodigoB);
             this.panel1.Controls.Add(this.RazonesConocerContrayente4);
             this.panel1.Controls.Add(this.TiempoCOnocerCOntrayente4);
             this.panel1.Controls.Add(this.TiempoConocerCOntrayente3);
@@ -2148,6 +2150,17 @@
             this.btnImprimir.Text = "IMPRIMIR";
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
+            // lblCodigoB
+            // 
+            this.lblCodigoB.AutoSize = true;
+            this.lblCodigoB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCodigoB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoB.Location = new System.Drawing.Point(886, 20);
+            this.lblCodigoB.Name = "lblCodigoB";
+            this.lblCodigoB.Size = new System.Drawing.Size(82, 18);
+            this.lblCodigoB.TabIndex = 62;
+            this.lblCodigoB.Text = "B0000001";
+            // 
             // ExpedienteMatrimonial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2283,5 +2296,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField NacionalidadTestigo;
         private MaterialSkin.Controls.MaterialSingleLineTextField DPITestigo;
         private MaterialSkin.Controls.MaterialSingleLineTextField NombreTestigo;
+        private System.Windows.Forms.Label lblCodigoB;
     }
 }
