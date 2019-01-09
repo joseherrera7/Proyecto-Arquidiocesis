@@ -107,6 +107,10 @@ namespace ProyectoArquidiocesis
 
         private void btnimprimirDoc_Click(object sender, EventArgs e)
         {
+            if (this.Controls.OfType<TextBox>().Any(t => string.IsNullOrEmpty(t.Text)))
+            {
+                //Your textbox is empty
+            }
             string oldFile = "C:\\Archives\\EXPEDIENTE MATRIMONIAL FORMATO 2.docx";
             newFile = "C:\\Archives\\Matrimonio - "+lblCodigoB.Text+".docx";
             using (DocX document = DocX.Load(oldFile))
@@ -253,26 +257,6 @@ namespace ProyectoArquidiocesis
         private void FolioConfirmacionNovio_Click(object sender, EventArgs e)
         {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void AceptoLaIniciacionCristianaNovio_Click(object sender, EventArgs e)
@@ -327,26 +311,28 @@ namespace ProyectoArquidiocesis
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
 
-
-
-            if (p != null)
-            {
-                string docxPath = @"C:\Archives\Matrimonio - " + lblCodigoB.Text + ".docx";
-                string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
-
-
-                // 2. Convert DOCX file to PDF file 
-                if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
-                    System.Diagnostics.Process.Start(pdfPath);
-                else
-                {
-                    MessageBox.Show("Conversion failed!");
-                }
-            }
             if (impresion)
             {
+                SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
+
+
+
+                if (p != null)
+                {
+                    string docxPath = @"C:\Archives\Matrimonio - " + lblCodigoB.Text + ".docx";
+                    string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
+
+
+                    // 2. Convert DOCX file to PDF file 
+                    if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
+                        System.Diagnostics.Process.Start(pdfPath);
+                    else
+                    {
+                        MessageBox.Show("Conversion failed!");
+                    }
+                }
+
                 try
                 {
                     DateTime today = DateTime.Today;
