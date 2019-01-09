@@ -43,6 +43,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PdfMetamorphosis, Version=7.0.8.10, Culture=neutral, PublicKeyToken=f77041e5caa5fc2f, processorArchitecture=MSIL">
+      <HintPath>..\packages\sautinsoft.pdfmetamorphosis.7.0.8.10\lib\net461\PdfMetamorphosis.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
