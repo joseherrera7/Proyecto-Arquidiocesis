@@ -327,6 +327,24 @@ namespace ProyectoArquidiocesis
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
+
+
+
+            if (p != null)
+            {
+                string docxPath = @"C:\Archives\newFile.docx";
+                string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
+
+
+                // 2. Convert DOCX file to PDF file 
+                if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
+                    System.Diagnostics.Process.Start(pdfPath);
+                else
+                {
+                    MessageBox.Show("Conversion failed!");
+                }
+            }
             if (impresion)
             {
                 try

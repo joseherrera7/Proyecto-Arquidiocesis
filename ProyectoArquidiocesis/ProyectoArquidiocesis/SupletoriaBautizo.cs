@@ -213,8 +213,7 @@ namespace ProyectoArquidiocesis
                     System.Diagnostics.Process.Start(pdfPath);
                 else
                 {
-                    System.Console.WriteLine("Conversion failed!");
-                    Console.ReadLine();
+                    MessageBox.Show("Conversion failed!");
                 }
             }
 
