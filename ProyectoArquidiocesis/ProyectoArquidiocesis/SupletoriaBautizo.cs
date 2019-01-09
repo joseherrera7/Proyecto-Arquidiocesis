@@ -242,6 +242,7 @@ namespace ProyectoArquidiocesis
                             MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ReLoad();
                             limpiar();
+                            wordDocument.Close();
                             System.IO.File.Delete(newFile);
 
                         }

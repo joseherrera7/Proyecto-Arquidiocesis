@@ -601,7 +601,9 @@ namespace ProyectoArquidiocesis
                             MessageBox.Show(null, "Expediente Matrimonial creado exitosamente", "Expediente Matrimonial", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ReLoad();
                             limpiar();
+                            wordDocument.Close();
                             System.IO.File.Delete(newFile);
+                            
                         }
                     }
                     catch

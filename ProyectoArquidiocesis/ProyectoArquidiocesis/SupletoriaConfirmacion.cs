@@ -154,6 +154,7 @@ namespace ProyectoArquidiocesis
                             MessageBox.Show(null, "Supletoria de Confirmación creada exitosamente", "Supletoria Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ReLoad();
                             limpiar();
+                            wordDocument.Close();
                             System.IO.File.Delete(newFile);
                         }
                     }
