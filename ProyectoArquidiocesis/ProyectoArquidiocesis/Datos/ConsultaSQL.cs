@@ -10,7 +10,7 @@ namespace ProyectoArquidiocesis.Datos
 {
     class ConsultaSQL
     {
-        public void NuevoMatrimonio(string id, string fecha, string notario, string novio, string novia, string urlDoc, string hashcode)
+        public void NuevoMatrimonio(string id, string fecha, string notario, string novio, string novia, string urlDoc)
         {
             //crear un objeto conexion
             MySqlConnection conectar = Conexion.getConexion();
@@ -30,7 +30,7 @@ namespace ProyectoArquidiocesis.Datos
                 //Pondremos tipo text y enviar sql
                 comando.CommandType = System.Data.CommandType.Text;
 
-                comando.CommandText = "INSERT INTO MATRIMONIO VALUES(@a, @b, @c, @d, @e, @f, @g);";
+                comando.CommandText = "INSERT INTO MATRIMONIO VALUES(@a, @b, @c, @d, @e, @f);";
 
                 //Agregar los parametros
                 comando.Parameters.AddWithValue("@a", id);
@@ -39,7 +39,6 @@ namespace ProyectoArquidiocesis.Datos
                 comando.Parameters.AddWithValue("@d", novio);
                 comando.Parameters.AddWithValue("@e", novia);
                 comando.Parameters.AddWithValue("@f", urlDoc);
-                comando.Parameters.AddWithValue("@g", hashcode);
 
                 //Ejecutar comando sql
                 try
@@ -61,7 +60,7 @@ namespace ProyectoArquidiocesis.Datos
             }
         }
 
-        public void NuevoBautismo(string id, string fecha, string notario, string bautizado, string urlDoc, string hashcode)
+        public void NuevoBautismo(string id, string fecha, string notario, string bautizado, string urlDoc)
         {
             //crear un objeto conexion
             MySqlConnection conectar = Conexion.getConexion();
@@ -81,7 +80,7 @@ namespace ProyectoArquidiocesis.Datos
                 //Pondremos tipo text y enviar sql
                 comando.CommandType = System.Data.CommandType.Text;
 
-                comando.CommandText = "INSERT INTO BAUTISMO VALUES(@a, @b, @c, @d, @e, @f);";
+                comando.CommandText = "INSERT INTO BAUTISMO VALUES(@a, @b, @c, @d, @e);";
 
                 //Agregar los parametros
                 comando.Parameters.AddWithValue("@a", id);
@@ -89,7 +88,6 @@ namespace ProyectoArquidiocesis.Datos
                 comando.Parameters.AddWithValue("@c", notario);
                 comando.Parameters.AddWithValue("@d", bautizado);
                 comando.Parameters.AddWithValue("@e", urlDoc);
-                comando.Parameters.AddWithValue("@f", hashcode);
 
                 //Ejecutar comando sql
                 try
@@ -110,7 +108,7 @@ namespace ProyectoArquidiocesis.Datos
             }
         }
 
-        public void NuevaConfirmacion(string id, string fecha, string notario, string confirmado, string urlDoc, string hashcode)
+        public void NuevaConfirmacion(string id, string fecha, string notario, string confirmado, string urlDoc)
         {
             //crear un objeto conexion
             MySqlConnection conectar = Conexion.getConexion();
@@ -130,7 +128,7 @@ namespace ProyectoArquidiocesis.Datos
                 //Pondremos tipo text y enviar sql
                 comando.CommandType = System.Data.CommandType.Text;
 
-                comando.CommandText = "INSERT INTO CONFIRMACION VALUES(@a, @b, @c, @d, @e, @f);";
+                comando.CommandText = "INSERT INTO CONFIRMACION VALUES(@a, @b, @c, @d, @e);";
 
                 //Agregar los parametros
                 comando.Parameters.AddWithValue("@a", id);
@@ -138,7 +136,6 @@ namespace ProyectoArquidiocesis.Datos
                 comando.Parameters.AddWithValue("@c", notario);
                 comando.Parameters.AddWithValue("@d", confirmado);
                 comando.Parameters.AddWithValue("@e", urlDoc);
-                comando.Parameters.AddWithValue("@f", hashcode);
 
                 //Ejecutar comando sql
                 try

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCodigoB = new System.Windows.Forms.Label();
             this.RazonesConocerContrayente4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.TiempoCOnocerCOntrayente4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.TiempoConocerCOntrayente3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -140,7 +141,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bntSalir = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.lblCodigoB = new System.Windows.Forms.Label();
+            this.txtNotario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +149,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.txtNotario);
             this.panel1.Controls.Add(this.lblCodigoB);
             this.panel1.Controls.Add(this.RazonesConocerContrayente4);
             this.panel1.Controls.Add(this.TiempoCOnocerCOntrayente4);
@@ -262,6 +264,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 640);
             this.panel1.TabIndex = 0;
+            // 
+            // lblCodigoB
+            // 
+            this.lblCodigoB.AutoSize = true;
+            this.lblCodigoB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCodigoB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoB.Location = new System.Drawing.Point(886, 20);
+            this.lblCodigoB.Name = "lblCodigoB";
+            this.lblCodigoB.Size = new System.Drawing.Size(84, 18);
+            this.lblCodigoB.TabIndex = 62;
+            this.lblCodigoB.Text = "M0000001";
             // 
             // RazonesConocerContrayente4
             // 
@@ -2088,7 +2101,7 @@
             this.btnimprimirDoc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnimprimirDoc.Depth = 0;
             this.btnimprimirDoc.Icon = null;
-            this.btnimprimirDoc.Location = new System.Drawing.Point(235, 6719);
+            this.btnimprimirDoc.Location = new System.Drawing.Point(327, 6719);
             this.btnimprimirDoc.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnimprimirDoc.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnimprimirDoc.Name = "btnimprimirDoc";
@@ -2105,7 +2118,7 @@
             this.BtnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BtnGuardar.Depth = 0;
             this.BtnGuardar.Icon = null;
-            this.BtnGuardar.Location = new System.Drawing.Point(542, 6719);
+            this.BtnGuardar.Location = new System.Drawing.Point(582, 6719);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.BtnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnGuardar.Name = "BtnGuardar";
@@ -2114,6 +2127,7 @@
             this.BtnGuardar.TabIndex = 1;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // pictureBox1
             // 
@@ -2150,16 +2164,22 @@
             this.btnImprimir.Text = "IMPRIMIR";
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
-            // lblCodigoB
+            // txtNotario
             // 
-            this.lblCodigoB.AutoSize = true;
-            this.lblCodigoB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodigoB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoB.Location = new System.Drawing.Point(886, 20);
-            this.lblCodigoB.Name = "lblCodigoB";
-            this.lblCodigoB.Size = new System.Drawing.Size(82, 18);
-            this.lblCodigoB.TabIndex = 62;
-            this.lblCodigoB.Text = "B0000001";
+            this.txtNotario.Depth = 0;
+            this.txtNotario.Hint = "";
+            this.txtNotario.Location = new System.Drawing.Point(441, 735);
+            this.txtNotario.MaxLength = 32767;
+            this.txtNotario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNotario.Name = "txtNotario";
+            this.txtNotario.PasswordChar = '\0';
+            this.txtNotario.SelectedText = "";
+            this.txtNotario.SelectionLength = 0;
+            this.txtNotario.SelectionStart = 0;
+            this.txtNotario.Size = new System.Drawing.Size(495, 23);
+            this.txtNotario.TabIndex = 115;
+            this.txtNotario.TabStop = false;
+            this.txtNotario.UseSystemPasswordChar = false;
             // 
             // ExpedienteMatrimonial
             // 
@@ -2297,5 +2317,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField DPITestigo;
         private MaterialSkin.Controls.MaterialSingleLineTextField NombreTestigo;
         private System.Windows.Forms.Label lblCodigoB;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNotario;
     }
 }
