@@ -12,7 +12,7 @@ using Microsoft.Office.Interop.Word;
 //using System.Text;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Xceed.Words.NET;
 
 namespace ProyectoArquidiocesis
 {
@@ -168,10 +168,37 @@ namespace ProyectoArquidiocesis
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-           // using { docx document = docx}
-            
-            var ap = new Microsoft.Office.Interop.Word.Application();
-            Document doc = ap.Documents.Add(@"C:\Users\USER\Documents\prueba2.docx");
+
+
+            string oldFile = "C:\\Archives\\SUPLETORIA DE CONFIRMACIÓN.docx";
+            string newFile = "C:\\Archives\\newFile.docx";
+            using (DocX document = DocX.Load(oldFile))
+            {
+
+                document.ReplaceText("_________________parroquia________________", txt1Parroquia.Text);
+                document.ReplaceText("_________________________nombre_________________________________", txt2Confirmado.Text);
+                document.ReplaceText("________________________motivo____________________", txt3Motivo.Text);
+                document.ReplaceText("___________________________testigo__________________________________", txt4Testigo.Text);
+                document.ReplaceText("__________________________direccion_________________________________________________________________________________________", txt5Domicilio.Text);
+                document.ReplaceText("_________________________certeza______________________________________", txt6Juramento.Text);
+                document.ReplaceText("___dia__", txt7Dia.Text);
+                document.ReplaceText("________mes_______", txt8Mes.Text);
+                document.ReplaceText("________año________________", txt9Anio.Text);
+                document.ReplaceText("_________________________padre_______________________________", txt10Padre.Text);
+                document.ReplaceText("_______________________________madre________________________________", txt11Madre.Text);
+                document.ReplaceText("___________________parroquiaconfirmacion______________________________", txt12ParroquiaConfir.Text);
+                document.ReplaceText("__edad___", txt13Edad.Text);
+                document.ReplaceText("____________________________padrinos_______________________________________________________________________________________", txt14Padrinos.Text);
+                document.ReplaceText("____________________________certeza2_______________________________________________________________________________", txt15Certeza.Text);
+                document.ReplaceText("______notario____________", txtNotario.Text);
+
+                document.SaveAs(newFile);
+
+            }
+
+
+                var ap = new Microsoft.Office.Interop.Word.Application();
+            Document doc = ap.Documents.Add(@"C:\Archives\newFile.docx");
             //Document document = ap.Documents.Open(@"C:\Users\USER\Documents\prueba.docx");
 
             //PrintDialog dialogPrint = new PrintDialog();

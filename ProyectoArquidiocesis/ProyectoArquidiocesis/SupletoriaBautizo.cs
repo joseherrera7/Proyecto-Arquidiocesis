@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Xceed.Words.NET;
 
 namespace ProyectoArquidiocesis
 {
@@ -257,5 +258,40 @@ namespace ProyectoArquidiocesis
         {
 
         }
+        //boton imprimir!
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string oldFile = "C:\\Archives\\SUPLETORIA DE BAUTISMO.docx";
+            string newFile = "C:\\Archives\\newFile.docx";
+            using (DocX document = DocX.Load(oldFile))
+            {
+
+                document.ReplaceText("________________parroquia________________________",  txt1Parroquia.Text );
+                document.ReplaceText("______________________________bautizado____________________________________",  txt2Bautizado.Text );
+                document.ReplaceText("______________________motivo_______________________", txt3Motivo.Text);
+                document.ReplaceText("___________________________testigo___________________________________", txt4Testigo.Text);
+                document.ReplaceText("____edadtestigo____", txt5Edad.Text);
+                document.ReplaceText("____________________________direcciontestigo_______________________________________________________________________", txt6Domicilio.Text);
+                document.ReplaceText("_____________relacion_______________________", txt7Juramento.Text);
+                document.ReplaceText("__dia__", txt8Dia.Text);
+                document.ReplaceText("_______mes_________", txt9Mes.Text);
+                document.ReplaceText("___________año_________________", txt10Anio.Text);
+                document.ReplaceText("___________________________padre____________________________", txt11Padre.Text);
+                document.ReplaceText("_____________________________madre___________________________________", txt12Madre.Text);
+                document.ReplaceText("____________edad_____________", txt13Edad.Text);
+                document.ReplaceText("__________________________parroquiabautizo___________________________", txt14ParroquiaConfir.Text);
+                document.ReplaceText("_________________________Ppadrinos____________________________________________________________________", txt15Padrinos.Text);
+                document.ReplaceText("___________________________certeza____________________________________________________________", txt16Certeza.Text);
+                document.ReplaceText("________________________observaciones___________________", txt17Observaciones.Text);
+                document.ReplaceText("______________________________fecha________________________", txt18Fecha.Text);
+                document.ReplaceText("_________notario___________", txtNotario.Text);
+                
+
+
+
+                document.SaveAs(newFile);
+            }
+        }
+
     }
 }

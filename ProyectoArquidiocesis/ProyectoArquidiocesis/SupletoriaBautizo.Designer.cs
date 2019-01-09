@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtNotario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.lblCodigoB = new System.Windows.Forms.Label();
             this.txt18Fecha = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt17Observaciones = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txt5Edad = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -51,7 +51,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.lblCodigoB = new System.Windows.Forms.Label();
+            this.txtNotario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,23 +85,17 @@
             this.panel1.Size = new System.Drawing.Size(1024, 640);
             this.panel1.TabIndex = 1;
             // 
-            // txtNotario
+            // lblCodigoB
             // 
-            this.txtNotario.Depth = 0;
-            this.txtNotario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotario.Hint = "";
-            this.txtNotario.Location = new System.Drawing.Point(263, 560);
-            this.txtNotario.MaxLength = 32767;
-            this.txtNotario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNotario.Name = "txtNotario";
-            this.txtNotario.PasswordChar = '\0';
-            this.txtNotario.SelectedText = "";
-            this.txtNotario.SelectionLength = 0;
-            this.txtNotario.SelectionStart = 0;
-            this.txtNotario.Size = new System.Drawing.Size(469, 23);
-            this.txtNotario.TabIndex = 60;
-            this.txtNotario.TabStop = false;
-            this.txtNotario.UseSystemPasswordChar = false;
+            this.lblCodigoB.AutoSize = true;
+            this.lblCodigoB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCodigoB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoB.Location = new System.Drawing.Point(883, 33);
+            this.lblCodigoB.Name = "lblCodigoB";
+            this.lblCodigoB.Size = new System.Drawing.Size(82, 18);
+            this.lblCodigoB.TabIndex = 61;
+            this.lblCodigoB.Text = "B0000001";
+            this.lblCodigoB.Click += new System.EventHandler(this.lblCodigo_Click);
             // 
             // txt18Fecha
             // 
@@ -478,23 +472,29 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // lblCodigoB
+            // txtNotario
             // 
-            this.lblCodigoB.AutoSize = true;
-            this.lblCodigoB.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodigoB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoB.Location = new System.Drawing.Point(883, 33);
-            this.lblCodigoB.Name = "lblCodigoB";
-            this.lblCodigoB.Size = new System.Drawing.Size(82, 18);
-            this.lblCodigoB.TabIndex = 61;
-            this.lblCodigoB.Text = "B0000001";
-            this.lblCodigoB.Click += new System.EventHandler(this.lblCodigo_Click);
+            this.txtNotario.Depth = 0;
+            this.txtNotario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotario.Hint = "";
+            this.txtNotario.Location = new System.Drawing.Point(263, 564);
+            this.txtNotario.MaxLength = 32767;
+            this.txtNotario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNotario.Name = "txtNotario";
+            this.txtNotario.PasswordChar = '\0';
+            this.txtNotario.SelectedText = "";
+            this.txtNotario.SelectionLength = 0;
+            this.txtNotario.SelectionStart = 0;
+            this.txtNotario.Size = new System.Drawing.Size(469, 23);
+            this.txtNotario.TabIndex = 60;
+            this.txtNotario.TabStop = false;
+            this.txtNotario.UseSystemPasswordChar = false;
             // 
             // SupletoriaBautizo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1024, 800);
+            this.ClientSize = new System.Drawing.Size(1024, 788);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
@@ -533,7 +533,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txt17Observaciones;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnGuardar;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNotario;
         private System.Windows.Forms.Label lblCodigoB;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNotario;
     }
 }
