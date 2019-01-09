@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -249,5 +250,56 @@ namespace ProyectoArquidiocesis
                 Console.WriteLine("Entro catch2");
             }
         }
+
+        private void bntAbrir_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conectar = Conexion.getConexion();
+            string id = txtAbrir.Text;
+            //Abrir conexion
+            conectar.Open();
+
+            //crear objeto de tipo MySqlCommand
+            string script = "";
+
+            if (matrimonio == true)
+            {
+                 script = "select urlDoc from matrimonio where id = '" + id + "'";
+            }
+            if (bautismo == true)
+            {
+                 script = "select urlDoc from bautismo where id = '" + id + "'";
+            }
+            if (confirmacion == true) {
+                 script = "select urlDoc from confirmacion where id = '" + id + "'";
+
+            }
+
+
+
+            MySqlCommand comando = new MySqlCommand(script, conectar);
+
+            try
+            {
+                string url = (comando.ExecuteScalar()).ToString();
+                if (url != "")
+                {
+                    Process.Start(url);
+                    txtAbrir.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Dato inválido, verificar si el ID es correcto", "Abrir Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                conectar.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Dato inválido, verificar si el ID es correcto", "Abrir Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                conectar.Close();
+            }
+
+        }
     }
 }
+

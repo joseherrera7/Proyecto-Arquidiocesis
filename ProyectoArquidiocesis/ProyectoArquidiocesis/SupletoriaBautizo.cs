@@ -19,7 +19,9 @@ namespace ProyectoArquidiocesis
 
     public partial class SupletoriaBautizo : MaterialSkin.Controls.MaterialForm
     {
-       
+
+        public string newFile;
+        public bool impresion = false;
 
         public SupletoriaBautizo()
         {
@@ -197,62 +199,69 @@ namespace ProyectoArquidiocesis
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-
-            SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
-
-            
-
-            if (p != null)
+            if (impresion)
             {
-                string docxPath = @"C:\Archives\newFile.docx";
-                string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
+                SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
 
 
-                // 2. Convert DOCX file to PDF file 
-                if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
-                    System.Diagnostics.Process.Start(pdfPath);
-                else
+
+                if (p != null)
                 {
-                    MessageBox.Show("Conversion failed!");
+                    string docxPath = @"C:\Archives\newFile.docx";
+                    string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
+
+
+                    // 2. Convert DOCX file to PDF file 
+                    if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
+                        System.Diagnostics.Process.Start(pdfPath);
+                    else
+                    {
+                        MessageBox.Show("Conversion failed!");
+                    }
+                }
+
+                //id, fecha, notario, bautizado, url doc, hashcode.
+                try
+                {
+                    DateTime today = DateTime.Today;
+                    //obtener los datos
+                    string id = lblCodigoB.Text;
+                    string fecha = today.ToString("d");
+                    string notario = txtNotario.Text;
+                    string confirmado = txt2Bautizado.Text;
+                    string urldoc = newFile;
+
+                    //Crear objeto tipo ConsultaSQL
+                    ConsultaSQL insercion = new ConsultaSQL();
+
+                    if (txtNotario.Text == "" || txt10Anio.Text == "" || txt11Padre.Text == "" || txt12Madre.Text == "" || txt13Edad.Text == "" ||
+                        txt14ParroquiaConfir.Text == "" || txt15Padrinos.Text == "" || txt16Certeza.Text == ""
+                        || txt17Observaciones.Text == "" || txt18Fecha.Text == "" || txt1Parroquia.Text == ""
+                        || txt2Bautizado.Text == "" || txt3Motivo.Text == "" || txt4Testigo.Text == ""
+                        || txt5Edad.Text == "" || txt6Domicilio.Text == "" || txt7Juramento.Text == "" || txt8Dia.Text == ""
+                        || txt9Mes.Text == "")
+                    {
+                        MessageBox.Show(null, "Faltan campos por completar", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+
+                        insercion.NuevoBautismo(id, fecha, notario, confirmado, urldoc);
+                        MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ReLoad();
+                        limpiar();
+
+                    }
+                }
+                catch
+                {
                 }
             }
-
-            //id, fecha, notario, bautizado, url doc, hashcode.
-            try
+            else
             {
-                DateTime today = DateTime.Today;
-                //obtener los datos
-                string id = lblCodigoB.Text;
-                string fecha = today.ToString("d");
-                string notario = txtNotario.Text;
-                string confirmado = txt2Bautizado.Text;
-                string urldoc = "prueba";
-
-                //Crear objeto tipo ConsultaSQL
-                ConsultaSQL insercion = new ConsultaSQL();
-
-                if (txtNotario.Text == "" || txt10Anio.Text == "" || txt11Padre.Text == "" || txt12Madre.Text == "" || txt13Edad.Text == "" ||
-                    txt14ParroquiaConfir.Text == "" || txt15Padrinos.Text == "" || txt16Certeza.Text == ""
-                    || txt17Observaciones.Text == "" || txt18Fecha.Text == "" || txt1Parroquia.Text == ""
-                    || txt2Bautizado.Text == "" || txt3Motivo.Text == "" || txt4Testigo.Text == ""
-                    || txt5Edad.Text == "" || txt6Domicilio.Text == "" || txt7Juramento.Text == "" || txt8Dia.Text == ""
-                    || txt9Mes.Text == "")
-                {
-                    MessageBox.Show(null, "Faltan campos por completar", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-
-                    insercion.NuevoBautismo(id, fecha, notario, confirmado, urldoc);
-                    MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ReLoad();
-                    limpiar();
-
-                }
+                MessageBox.Show("Debe Imprimir previo a guardar definitivamente.", "Guardar Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            catch
-            {
-            }
+
         }
         public void limpiar()
         {
@@ -275,6 +284,8 @@ namespace ProyectoArquidiocesis
             txt12Madre.Text = "";
             txt11Padre.Text = "";
             txt10Anio.Text = "";
+            newFile = "";
+            impresion = false;
         }
 
         private void lblCodigo_Click(object sender, EventArgs e)
@@ -285,7 +296,7 @@ namespace ProyectoArquidiocesis
         private void button1_Click(object sender, EventArgs e)
         {
             string oldFile = "C:\\Archives\\SUPLETORIA DE BAUTISMO.docx";
-            string newFile = "C:\\Archives\\newFile.docx";
+            newFile = "C:\\Archives\\Bautismo - " + lblCodigoB.Text + ".docx";
             using (DocX document = DocX.Load(oldFile))
             {
 
@@ -313,11 +324,12 @@ namespace ProyectoArquidiocesis
 
 
                 document.SaveAs(newFile);
+                impresion = true;
 
             }
 
             var ap = new Microsoft.Office.Interop.Word.Application();
-            Document doc = ap.Documents.Add(@"C:\Archives\newFile.docx");
+            Document doc = ap.Documents.Add(newFile);
             //Document document = ap.Documents.Open(@"C:\Users\USER\Documents\prueba.docx");
 
             //PrintDialog dialogPrint = new PrintDialog();

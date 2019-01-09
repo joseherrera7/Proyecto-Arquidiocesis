@@ -108,6 +108,10 @@ namespace ProyectoArquidiocesis
 
         private void btnimprimirDoc_Click(object sender, EventArgs e)
         {
+            if (this.Controls.OfType<TextBox>().Any(t => string.IsNullOrEmpty(t.Text)))
+            {
+                //Your textbox is empty
+            }
             string oldFile = "C:\\Archives\\EXPEDIENTE MATRIMONIAL FORMATO 2.docx";
             newFile = "C:\\Archives\\Matrimonio - "+lblCodigoB.Text+".docx";
             using (DocX document = DocX.Load(oldFile))
@@ -253,26 +257,6 @@ namespace ProyectoArquidiocesis
 
         private void FolioConfirmacionNovio_Click(object sender, EventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
 

@@ -39,6 +39,9 @@
             this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnBuscar = new MaterialSkin.Controls.MaterialFlatButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtAbrir = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.bntAbrir = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,11 +190,61 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Buscar por:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 482);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 18);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Abrir documento (ID):";
+            // 
+            // txtAbrir
+            // 
+            this.txtAbrir.Depth = 0;
+            this.txtAbrir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAbrir.Hint = "";
+            this.txtAbrir.Location = new System.Drawing.Point(219, 484);
+            this.txtAbrir.MaxLength = 32767;
+            this.txtAbrir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtAbrir.Name = "txtAbrir";
+            this.txtAbrir.PasswordChar = '\0';
+            this.txtAbrir.SelectedText = "";
+            this.txtAbrir.SelectionLength = 0;
+            this.txtAbrir.SelectionStart = 0;
+            this.txtAbrir.Size = new System.Drawing.Size(305, 23);
+            this.txtAbrir.TabIndex = 10;
+            this.txtAbrir.TabStop = false;
+            this.txtAbrir.UseSystemPasswordChar = false;
+            // 
+            // bntAbrir
+            // 
+            this.bntAbrir.AutoSize = true;
+            this.bntAbrir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bntAbrir.BackColor = System.Drawing.Color.GreenYellow;
+            this.bntAbrir.Depth = 0;
+            this.bntAbrir.Icon = null;
+            this.bntAbrir.Location = new System.Drawing.Point(541, 474);
+            this.bntAbrir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bntAbrir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bntAbrir.Name = "bntAbrir";
+            this.bntAbrir.Primary = false;
+            this.bntAbrir.Size = new System.Drawing.Size(60, 36);
+            this.bntAbrir.TabIndex = 12;
+            this.bntAbrir.Text = "Abrir";
+            this.bntAbrir.UseVisualStyleBackColor = false;
+            this.bntAbrir.Click += new System.EventHandler(this.bntAbrir_Click);
+            // 
             // ArchivosGuardados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(800, 532);
+            this.Controls.Add(this.bntAbrir);
+            this.Controls.Add(this.txtAbrir);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -221,5 +274,8 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
         private MaterialSkin.Controls.MaterialFlatButton btnBuscar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtAbrir;
+        private MaterialSkin.Controls.MaterialFlatButton bntAbrir;
     }
 }
