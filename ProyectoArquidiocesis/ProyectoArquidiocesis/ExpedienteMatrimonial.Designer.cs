@@ -29,6 +29,28 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RazonesConocerContrayente4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TiempoCOnocerCOntrayente4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TiempoConocerCOntrayente3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.RazonesCOnocerContrayente3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.ProfesionTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TelefonoTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.EdadTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DomilicioTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.NacionalidadTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DPITestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.NombreTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.RazonesDeConocerAlCOntrayente2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TiempoDeConocerAlContrayente2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TiempoDeConocerAlContrayente = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.RazonesDeConocerAlCOntrayente = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.ProfesionTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TelefonoTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.EdadTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DomicilioTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.NacionalidadTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.DPITestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.NombreTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.NombreMadreNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.ReligionNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.ProfesionNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -41,9 +63,6 @@
             this.NacionalidadNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.DPIPasaporteNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.NombreCompletoNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.AñoNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.MesNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.DiasNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.ComoHaLLegadoACOnocerLasObligacionesNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.AbiertoAProcrearNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.FidelidadASuEsposoNovia = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -85,9 +104,6 @@
             this.FeligresNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.ParroquiaConfirmacionNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.ParroquiaBautismoNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.AñoExpedienteMatrimonial = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.MesExpedienteMatrimonial = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.DiaExpedienteMatrimonial = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.ExplicacionDeObligacionesMatrimonioNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.AceptaElMatrimonioAbiertoAProcrearNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.AceptaFidelidadAContuyeNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -110,7 +126,7 @@
             this.DireccionNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.NombreMadreNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.NombrePadreNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TeléfonoNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TelefonoNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.EstadoCivilNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.EdadNovio = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -124,28 +140,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bntSalir = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.NombreTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.DPITestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.NacionalidadTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.DomicilioTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.EdadTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TelefonoTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.ProfesionTestigo = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.RazonesDeConocerAlCOntrayente = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TiempoDeConocerAlContrayente = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TiempoDeConocerAlContrayente2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.RazonesDeConocerAlCOntrayente2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.RazonesConocerContrayente4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TiempoCOnocerCOntrayente4 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TiempoConocerCOntrayente3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.RazonesCOnocerContrayente3 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.ProfesionTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.TelefonoTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.EdadTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.DomilicioTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.NacionalidadTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.DPITestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.NombreTestigo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -187,9 +181,6 @@
             this.panel1.Controls.Add(this.NacionalidadNovia);
             this.panel1.Controls.Add(this.DPIPasaporteNovia);
             this.panel1.Controls.Add(this.NombreCompletoNovia);
-            this.panel1.Controls.Add(this.AñoNovia);
-            this.panel1.Controls.Add(this.MesNovia);
-            this.panel1.Controls.Add(this.DiasNovia);
             this.panel1.Controls.Add(this.ComoHaLLegadoACOnocerLasObligacionesNovia);
             this.panel1.Controls.Add(this.AbiertoAProcrearNovia);
             this.panel1.Controls.Add(this.FidelidadASuEsposoNovia);
@@ -231,9 +222,6 @@
             this.panel1.Controls.Add(this.FeligresNovio);
             this.panel1.Controls.Add(this.ParroquiaConfirmacionNovio);
             this.panel1.Controls.Add(this.ParroquiaBautismoNovio);
-            this.panel1.Controls.Add(this.AñoExpedienteMatrimonial);
-            this.panel1.Controls.Add(this.MesExpedienteMatrimonial);
-            this.panel1.Controls.Add(this.DiaExpedienteMatrimonial);
             this.panel1.Controls.Add(this.ExplicacionDeObligacionesMatrimonioNovio);
             this.panel1.Controls.Add(this.AceptaElMatrimonioAbiertoAProcrearNovio);
             this.panel1.Controls.Add(this.AceptaFidelidadAContuyeNovio);
@@ -256,7 +244,7 @@
             this.panel1.Controls.Add(this.DireccionNovio);
             this.panel1.Controls.Add(this.NombreMadreNovio);
             this.panel1.Controls.Add(this.NombrePadreNovio);
-            this.panel1.Controls.Add(this.TeléfonoNovio);
+            this.panel1.Controls.Add(this.TelefonoNovio);
             this.panel1.Controls.Add(this.EstadoCivilNovio);
             this.panel1.Controls.Add(this.EdadNovio);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -272,6 +260,380 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 640);
             this.panel1.TabIndex = 0;
+            // 
+            // RazonesConocerContrayente4
+            // 
+            this.RazonesConocerContrayente4.Depth = 0;
+            this.RazonesConocerContrayente4.Hint = "";
+            this.RazonesConocerContrayente4.Location = new System.Drawing.Point(565, 6330);
+            this.RazonesConocerContrayente4.MaxLength = 32767;
+            this.RazonesConocerContrayente4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RazonesConocerContrayente4.Name = "RazonesConocerContrayente4";
+            this.RazonesConocerContrayente4.PasswordChar = '\0';
+            this.RazonesConocerContrayente4.SelectedText = "";
+            this.RazonesConocerContrayente4.SelectionLength = 0;
+            this.RazonesConocerContrayente4.SelectionStart = 0;
+            this.RazonesConocerContrayente4.Size = new System.Drawing.Size(226, 23);
+            this.RazonesConocerContrayente4.TabIndex = 114;
+            this.RazonesConocerContrayente4.TabStop = false;
+            this.RazonesConocerContrayente4.UseSystemPasswordChar = false;
+            // 
+            // TiempoCOnocerCOntrayente4
+            // 
+            this.TiempoCOnocerCOntrayente4.Depth = 0;
+            this.TiempoCOnocerCOntrayente4.Hint = "";
+            this.TiempoCOnocerCOntrayente4.Location = new System.Drawing.Point(134, 6330);
+            this.TiempoCOnocerCOntrayente4.MaxLength = 32767;
+            this.TiempoCOnocerCOntrayente4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TiempoCOnocerCOntrayente4.Name = "TiempoCOnocerCOntrayente4";
+            this.TiempoCOnocerCOntrayente4.PasswordChar = '\0';
+            this.TiempoCOnocerCOntrayente4.SelectedText = "";
+            this.TiempoCOnocerCOntrayente4.SelectionLength = 0;
+            this.TiempoCOnocerCOntrayente4.SelectionStart = 0;
+            this.TiempoCOnocerCOntrayente4.Size = new System.Drawing.Size(108, 23);
+            this.TiempoCOnocerCOntrayente4.TabIndex = 113;
+            this.TiempoCOnocerCOntrayente4.TabStop = false;
+            this.TiempoCOnocerCOntrayente4.UseSystemPasswordChar = false;
+            // 
+            // TiempoConocerCOntrayente3
+            // 
+            this.TiempoConocerCOntrayente3.Depth = 0;
+            this.TiempoConocerCOntrayente3.Hint = "";
+            this.TiempoConocerCOntrayente3.Location = new System.Drawing.Point(199, 6301);
+            this.TiempoConocerCOntrayente3.MaxLength = 32767;
+            this.TiempoConocerCOntrayente3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TiempoConocerCOntrayente3.Name = "TiempoConocerCOntrayente3";
+            this.TiempoConocerCOntrayente3.PasswordChar = '\0';
+            this.TiempoConocerCOntrayente3.SelectedText = "";
+            this.TiempoConocerCOntrayente3.SelectionLength = 0;
+            this.TiempoConocerCOntrayente3.SelectionStart = 0;
+            this.TiempoConocerCOntrayente3.Size = new System.Drawing.Size(107, 23);
+            this.TiempoConocerCOntrayente3.TabIndex = 112;
+            this.TiempoConocerCOntrayente3.TabStop = false;
+            this.TiempoConocerCOntrayente3.UseSystemPasswordChar = false;
+            // 
+            // RazonesCOnocerContrayente3
+            // 
+            this.RazonesCOnocerContrayente3.Depth = 0;
+            this.RazonesCOnocerContrayente3.Hint = "";
+            this.RazonesCOnocerContrayente3.Location = new System.Drawing.Point(632, 6301);
+            this.RazonesCOnocerContrayente3.MaxLength = 32767;
+            this.RazonesCOnocerContrayente3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RazonesCOnocerContrayente3.Name = "RazonesCOnocerContrayente3";
+            this.RazonesCOnocerContrayente3.PasswordChar = '\0';
+            this.RazonesCOnocerContrayente3.SelectedText = "";
+            this.RazonesCOnocerContrayente3.SelectionLength = 0;
+            this.RazonesCOnocerContrayente3.SelectionStart = 0;
+            this.RazonesCOnocerContrayente3.Size = new System.Drawing.Size(292, 23);
+            this.RazonesCOnocerContrayente3.TabIndex = 111;
+            this.RazonesCOnocerContrayente3.TabStop = false;
+            this.RazonesCOnocerContrayente3.UseSystemPasswordChar = false;
+            // 
+            // ProfesionTestigo2
+            // 
+            this.ProfesionTestigo2.Depth = 0;
+            this.ProfesionTestigo2.Hint = "";
+            this.ProfesionTestigo2.Location = new System.Drawing.Point(467, 6276);
+            this.ProfesionTestigo2.MaxLength = 32767;
+            this.ProfesionTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ProfesionTestigo2.Name = "ProfesionTestigo2";
+            this.ProfesionTestigo2.PasswordChar = '\0';
+            this.ProfesionTestigo2.SelectedText = "";
+            this.ProfesionTestigo2.SelectionLength = 0;
+            this.ProfesionTestigo2.SelectionStart = 0;
+            this.ProfesionTestigo2.Size = new System.Drawing.Size(190, 23);
+            this.ProfesionTestigo2.TabIndex = 110;
+            this.ProfesionTestigo2.TabStop = false;
+            this.ProfesionTestigo2.UseSystemPasswordChar = false;
+            // 
+            // TelefonoTestigo2
+            // 
+            this.TelefonoTestigo2.Depth = 0;
+            this.TelefonoTestigo2.Hint = "";
+            this.TelefonoTestigo2.Location = new System.Drawing.Point(134, 6276);
+            this.TelefonoTestigo2.MaxLength = 32767;
+            this.TelefonoTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TelefonoTestigo2.Name = "TelefonoTestigo2";
+            this.TelefonoTestigo2.PasswordChar = '\0';
+            this.TelefonoTestigo2.SelectedText = "";
+            this.TelefonoTestigo2.SelectionLength = 0;
+            this.TelefonoTestigo2.SelectionStart = 0;
+            this.TelefonoTestigo2.Size = new System.Drawing.Size(164, 23);
+            this.TelefonoTestigo2.TabIndex = 109;
+            this.TelefonoTestigo2.TabStop = false;
+            this.TelefonoTestigo2.UseSystemPasswordChar = false;
+            // 
+            // EdadTestigo2
+            // 
+            this.EdadTestigo2.Depth = 0;
+            this.EdadTestigo2.Hint = "";
+            this.EdadTestigo2.Location = new System.Drawing.Point(761, 6249);
+            this.EdadTestigo2.MaxLength = 32767;
+            this.EdadTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.EdadTestigo2.Name = "EdadTestigo2";
+            this.EdadTestigo2.PasswordChar = '\0';
+            this.EdadTestigo2.SelectedText = "";
+            this.EdadTestigo2.SelectionLength = 0;
+            this.EdadTestigo2.SelectionStart = 0;
+            this.EdadTestigo2.Size = new System.Drawing.Size(57, 23);
+            this.EdadTestigo2.TabIndex = 108;
+            this.EdadTestigo2.TabStop = false;
+            this.EdadTestigo2.UseSystemPasswordChar = false;
+            // 
+            // DomilicioTestigo2
+            // 
+            this.DomilicioTestigo2.Depth = 0;
+            this.DomilicioTestigo2.Hint = "";
+            this.DomilicioTestigo2.Location = new System.Drawing.Point(415, 6249);
+            this.DomilicioTestigo2.MaxLength = 32767;
+            this.DomilicioTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DomilicioTestigo2.Name = "DomilicioTestigo2";
+            this.DomilicioTestigo2.PasswordChar = '\0';
+            this.DomilicioTestigo2.SelectedText = "";
+            this.DomilicioTestigo2.SelectionLength = 0;
+            this.DomilicioTestigo2.SelectionStart = 0;
+            this.DomilicioTestigo2.Size = new System.Drawing.Size(302, 23);
+            this.DomilicioTestigo2.TabIndex = 107;
+            this.DomilicioTestigo2.TabStop = false;
+            this.DomilicioTestigo2.UseSystemPasswordChar = false;
+            // 
+            // NacionalidadTestigo2
+            // 
+            this.NacionalidadTestigo2.Depth = 0;
+            this.NacionalidadTestigo2.Hint = "";
+            this.NacionalidadTestigo2.Location = new System.Drawing.Point(58, 6249);
+            this.NacionalidadTestigo2.MaxLength = 32767;
+            this.NacionalidadTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NacionalidadTestigo2.Name = "NacionalidadTestigo2";
+            this.NacionalidadTestigo2.PasswordChar = '\0';
+            this.NacionalidadTestigo2.SelectedText = "";
+            this.NacionalidadTestigo2.SelectionLength = 0;
+            this.NacionalidadTestigo2.SelectionStart = 0;
+            this.NacionalidadTestigo2.Size = new System.Drawing.Size(195, 23);
+            this.NacionalidadTestigo2.TabIndex = 106;
+            this.NacionalidadTestigo2.TabStop = false;
+            this.NacionalidadTestigo2.UseSystemPasswordChar = false;
+            // 
+            // DPITestigo2
+            // 
+            this.DPITestigo2.Depth = 0;
+            this.DPITestigo2.Hint = "";
+            this.DPITestigo2.Location = new System.Drawing.Point(664, 6222);
+            this.DPITestigo2.MaxLength = 32767;
+            this.DPITestigo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DPITestigo2.Name = "DPITestigo2";
+            this.DPITestigo2.PasswordChar = '\0';
+            this.DPITestigo2.SelectedText = "";
+            this.DPITestigo2.SelectionLength = 0;
+            this.DPITestigo2.SelectionStart = 0;
+            this.DPITestigo2.Size = new System.Drawing.Size(127, 23);
+            this.DPITestigo2.TabIndex = 105;
+            this.DPITestigo2.TabStop = false;
+            this.DPITestigo2.UseSystemPasswordChar = false;
+            // 
+            // NombreTestigo2
+            // 
+            this.NombreTestigo2.Depth = 0;
+            this.NombreTestigo2.Hint = "";
+            this.NombreTestigo2.Location = new System.Drawing.Point(542, 6197);
+            this.NombreTestigo2.MaxLength = 32767;
+            this.NombreTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NombreTestigo2.Name = "NombreTestigo2";
+            this.NombreTestigo2.PasswordChar = '\0';
+            this.NombreTestigo2.SelectedText = "";
+            this.NombreTestigo2.SelectionLength = 0;
+            this.NombreTestigo2.SelectionStart = 0;
+            this.NombreTestigo2.Size = new System.Drawing.Size(340, 23);
+            this.NombreTestigo2.TabIndex = 104;
+            this.NombreTestigo2.TabStop = false;
+            this.NombreTestigo2.UseSystemPasswordChar = false;
+            // 
+            // RazonesDeConocerAlCOntrayente2
+            // 
+            this.RazonesDeConocerAlCOntrayente2.Depth = 0;
+            this.RazonesDeConocerAlCOntrayente2.Hint = "";
+            this.RazonesDeConocerAlCOntrayente2.Location = new System.Drawing.Point(565, 5915);
+            this.RazonesDeConocerAlCOntrayente2.MaxLength = 32767;
+            this.RazonesDeConocerAlCOntrayente2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RazonesDeConocerAlCOntrayente2.Name = "RazonesDeConocerAlCOntrayente2";
+            this.RazonesDeConocerAlCOntrayente2.PasswordChar = '\0';
+            this.RazonesDeConocerAlCOntrayente2.SelectedText = "";
+            this.RazonesDeConocerAlCOntrayente2.SelectionLength = 0;
+            this.RazonesDeConocerAlCOntrayente2.SelectionStart = 0;
+            this.RazonesDeConocerAlCOntrayente2.Size = new System.Drawing.Size(228, 23);
+            this.RazonesDeConocerAlCOntrayente2.TabIndex = 103;
+            this.RazonesDeConocerAlCOntrayente2.TabStop = false;
+            this.RazonesDeConocerAlCOntrayente2.UseSystemPasswordChar = false;
+            // 
+            // TiempoDeConocerAlContrayente2
+            // 
+            this.TiempoDeConocerAlContrayente2.Depth = 0;
+            this.TiempoDeConocerAlContrayente2.Hint = "";
+            this.TiempoDeConocerAlContrayente2.Location = new System.Drawing.Point(134, 5915);
+            this.TiempoDeConocerAlContrayente2.MaxLength = 32767;
+            this.TiempoDeConocerAlContrayente2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TiempoDeConocerAlContrayente2.Name = "TiempoDeConocerAlContrayente2";
+            this.TiempoDeConocerAlContrayente2.PasswordChar = '\0';
+            this.TiempoDeConocerAlContrayente2.SelectedText = "";
+            this.TiempoDeConocerAlContrayente2.SelectionLength = 0;
+            this.TiempoDeConocerAlContrayente2.SelectionStart = 0;
+            this.TiempoDeConocerAlContrayente2.Size = new System.Drawing.Size(110, 23);
+            this.TiempoDeConocerAlContrayente2.TabIndex = 102;
+            this.TiempoDeConocerAlContrayente2.TabStop = false;
+            this.TiempoDeConocerAlContrayente2.UseSystemPasswordChar = false;
+            // 
+            // TiempoDeConocerAlContrayente
+            // 
+            this.TiempoDeConocerAlContrayente.Depth = 0;
+            this.TiempoDeConocerAlContrayente.Hint = "";
+            this.TiempoDeConocerAlContrayente.Location = new System.Drawing.Point(199, 5886);
+            this.TiempoDeConocerAlContrayente.MaxLength = 32767;
+            this.TiempoDeConocerAlContrayente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TiempoDeConocerAlContrayente.Name = "TiempoDeConocerAlContrayente";
+            this.TiempoDeConocerAlContrayente.PasswordChar = '\0';
+            this.TiempoDeConocerAlContrayente.SelectedText = "";
+            this.TiempoDeConocerAlContrayente.SelectionLength = 0;
+            this.TiempoDeConocerAlContrayente.SelectionStart = 0;
+            this.TiempoDeConocerAlContrayente.Size = new System.Drawing.Size(109, 23);
+            this.TiempoDeConocerAlContrayente.TabIndex = 101;
+            this.TiempoDeConocerAlContrayente.TabStop = false;
+            this.TiempoDeConocerAlContrayente.UseSystemPasswordChar = false;
+            // 
+            // RazonesDeConocerAlCOntrayente
+            // 
+            this.RazonesDeConocerAlCOntrayente.Depth = 0;
+            this.RazonesDeConocerAlCOntrayente.Hint = "";
+            this.RazonesDeConocerAlCOntrayente.Location = new System.Drawing.Point(632, 5886);
+            this.RazonesDeConocerAlCOntrayente.MaxLength = 32767;
+            this.RazonesDeConocerAlCOntrayente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RazonesDeConocerAlCOntrayente.Name = "RazonesDeConocerAlCOntrayente";
+            this.RazonesDeConocerAlCOntrayente.PasswordChar = '\0';
+            this.RazonesDeConocerAlCOntrayente.SelectedText = "";
+            this.RazonesDeConocerAlCOntrayente.SelectionLength = 0;
+            this.RazonesDeConocerAlCOntrayente.SelectionStart = 0;
+            this.RazonesDeConocerAlCOntrayente.Size = new System.Drawing.Size(294, 23);
+            this.RazonesDeConocerAlCOntrayente.TabIndex = 100;
+            this.RazonesDeConocerAlCOntrayente.TabStop = false;
+            this.RazonesDeConocerAlCOntrayente.UseSystemPasswordChar = false;
+            // 
+            // ProfesionTestigo
+            // 
+            this.ProfesionTestigo.Depth = 0;
+            this.ProfesionTestigo.Hint = "";
+            this.ProfesionTestigo.Location = new System.Drawing.Point(467, 5861);
+            this.ProfesionTestigo.MaxLength = 32767;
+            this.ProfesionTestigo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ProfesionTestigo.Name = "ProfesionTestigo";
+            this.ProfesionTestigo.PasswordChar = '\0';
+            this.ProfesionTestigo.SelectedText = "";
+            this.ProfesionTestigo.SelectionLength = 0;
+            this.ProfesionTestigo.SelectionStart = 0;
+            this.ProfesionTestigo.Size = new System.Drawing.Size(192, 23);
+            this.ProfesionTestigo.TabIndex = 99;
+            this.ProfesionTestigo.TabStop = false;
+            this.ProfesionTestigo.UseSystemPasswordChar = false;
+            // 
+            // TelefonoTestigo
+            // 
+            this.TelefonoTestigo.Depth = 0;
+            this.TelefonoTestigo.Hint = "";
+            this.TelefonoTestigo.Location = new System.Drawing.Point(134, 5861);
+            this.TelefonoTestigo.MaxLength = 32767;
+            this.TelefonoTestigo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TelefonoTestigo.Name = "TelefonoTestigo";
+            this.TelefonoTestigo.PasswordChar = '\0';
+            this.TelefonoTestigo.SelectedText = "";
+            this.TelefonoTestigo.SelectionLength = 0;
+            this.TelefonoTestigo.SelectionStart = 0;
+            this.TelefonoTestigo.Size = new System.Drawing.Size(166, 23);
+            this.TelefonoTestigo.TabIndex = 98;
+            this.TelefonoTestigo.TabStop = false;
+            this.TelefonoTestigo.UseSystemPasswordChar = false;
+            // 
+            // EdadTestigo
+            // 
+            this.EdadTestigo.Depth = 0;
+            this.EdadTestigo.Hint = "";
+            this.EdadTestigo.Location = new System.Drawing.Point(761, 5834);
+            this.EdadTestigo.MaxLength = 32767;
+            this.EdadTestigo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.EdadTestigo.Name = "EdadTestigo";
+            this.EdadTestigo.PasswordChar = '\0';
+            this.EdadTestigo.SelectedText = "";
+            this.EdadTestigo.SelectionLength = 0;
+            this.EdadTestigo.SelectionStart = 0;
+            this.EdadTestigo.Size = new System.Drawing.Size(59, 23);
+            this.EdadTestigo.TabIndex = 97;
+            this.EdadTestigo.TabStop = false;
+            this.EdadTestigo.UseSystemPasswordChar = false;
+            // 
+            // DomicilioTestigo
+            // 
+            this.DomicilioTestigo.Depth = 0;
+            this.DomicilioTestigo.Hint = "";
+            this.DomicilioTestigo.Location = new System.Drawing.Point(415, 5834);
+            this.DomicilioTestigo.MaxLength = 32767;
+            this.DomicilioTestigo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DomicilioTestigo.Name = "DomicilioTestigo";
+            this.DomicilioTestigo.PasswordChar = '\0';
+            this.DomicilioTestigo.SelectedText = "";
+            this.DomicilioTestigo.SelectionLength = 0;
+            this.DomicilioTestigo.SelectionStart = 0;
+            this.DomicilioTestigo.Size = new System.Drawing.Size(304, 23);
+            this.DomicilioTestigo.TabIndex = 96;
+            this.DomicilioTestigo.TabStop = false;
+            this.DomicilioTestigo.UseSystemPasswordChar = false;
+            // 
+            // NacionalidadTestigo
+            // 
+            this.NacionalidadTestigo.Depth = 0;
+            this.NacionalidadTestigo.Hint = "";
+            this.NacionalidadTestigo.Location = new System.Drawing.Point(58, 5834);
+            this.NacionalidadTestigo.MaxLength = 32767;
+            this.NacionalidadTestigo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NacionalidadTestigo.Name = "NacionalidadTestigo";
+            this.NacionalidadTestigo.PasswordChar = '\0';
+            this.NacionalidadTestigo.SelectedText = "";
+            this.NacionalidadTestigo.SelectionLength = 0;
+            this.NacionalidadTestigo.SelectionStart = 0;
+            this.NacionalidadTestigo.Size = new System.Drawing.Size(197, 23);
+            this.NacionalidadTestigo.TabIndex = 95;
+            this.NacionalidadTestigo.TabStop = false;
+            this.NacionalidadTestigo.UseSystemPasswordChar = false;
+            // 
+            // DPITestigo
+            // 
+            this.DPITestigo.Depth = 0;
+            this.DPITestigo.Hint = "";
+            this.DPITestigo.Location = new System.Drawing.Point(664, 5807);
+            this.DPITestigo.MaxLength = 32767;
+            this.DPITestigo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DPITestigo.Name = "DPITestigo";
+            this.DPITestigo.PasswordChar = '\0';
+            this.DPITestigo.SelectedText = "";
+            this.DPITestigo.SelectionLength = 0;
+            this.DPITestigo.SelectionStart = 0;
+            this.DPITestigo.Size = new System.Drawing.Size(129, 23);
+            this.DPITestigo.TabIndex = 94;
+            this.DPITestigo.TabStop = false;
+            this.DPITestigo.UseSystemPasswordChar = false;
+            // 
+            // NombreTestigo
+            // 
+            this.NombreTestigo.Depth = 0;
+            this.NombreTestigo.Hint = "";
+            this.NombreTestigo.Location = new System.Drawing.Point(533, 5782);
+            this.NombreTestigo.MaxLength = 32767;
+            this.NombreTestigo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NombreTestigo.Name = "NombreTestigo";
+            this.NombreTestigo.PasswordChar = '\0';
+            this.NombreTestigo.SelectedText = "";
+            this.NombreTestigo.SelectionLength = 0;
+            this.NombreTestigo.SelectionStart = 0;
+            this.NombreTestigo.Size = new System.Drawing.Size(351, 23);
+            this.NombreTestigo.TabIndex = 93;
+            this.NombreTestigo.TabStop = false;
+            this.NombreTestigo.UseSystemPasswordChar = false;
             // 
             // NombreMadreNovia
             // 
@@ -477,57 +839,6 @@
             this.NombreCompletoNovia.TabStop = false;
             this.NombreCompletoNovia.Text = "Nombre Completo Novia";
             this.NombreCompletoNovia.UseSystemPasswordChar = false;
-            // 
-            // AñoNovia
-            // 
-            this.AñoNovia.Depth = 0;
-            this.AñoNovia.Hint = "";
-            this.AñoNovia.Location = new System.Drawing.Point(812, 3674);
-            this.AñoNovia.MaxLength = 32767;
-            this.AñoNovia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.AñoNovia.Name = "AñoNovia";
-            this.AñoNovia.PasswordChar = '\0';
-            this.AñoNovia.SelectedText = "";
-            this.AñoNovia.SelectionLength = 0;
-            this.AñoNovia.SelectionStart = 0;
-            this.AñoNovia.Size = new System.Drawing.Size(125, 23);
-            this.AñoNovia.TabIndex = 80;
-            this.AñoNovia.TabStop = false;
-            this.AñoNovia.UseSystemPasswordChar = false;
-            // 
-            // MesNovia
-            // 
-            this.MesNovia.Depth = 0;
-            this.MesNovia.Hint = "";
-            this.MesNovia.Location = new System.Drawing.Point(461, 3674);
-            this.MesNovia.MaxLength = 32767;
-            this.MesNovia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MesNovia.Name = "MesNovia";
-            this.MesNovia.PasswordChar = '\0';
-            this.MesNovia.SelectedText = "";
-            this.MesNovia.SelectionLength = 0;
-            this.MesNovia.SelectionStart = 0;
-            this.MesNovia.Size = new System.Drawing.Size(286, 23);
-            this.MesNovia.TabIndex = 79;
-            this.MesNovia.TabStop = false;
-            this.MesNovia.UseSystemPasswordChar = false;
-            // 
-            // DiasNovia
-            // 
-            this.DiasNovia.Depth = 0;
-            this.DiasNovia.Hint = "";
-            this.DiasNovia.Location = new System.Drawing.Point(171, 3674);
-            this.DiasNovia.MaxLength = 32767;
-            this.DiasNovia.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DiasNovia.Name = "DiasNovia";
-            this.DiasNovia.PasswordChar = '\0';
-            this.DiasNovia.SelectedText = "";
-            this.DiasNovia.SelectionLength = 0;
-            this.DiasNovia.SelectionStart = 0;
-            this.DiasNovia.Size = new System.Drawing.Size(160, 23);
-            this.DiasNovia.TabIndex = 78;
-            this.DiasNovia.TabStop = false;
-            this.DiasNovia.UseSystemPasswordChar = false;
             // 
             // ComoHaLLegadoACOnocerLasObligacionesNovia
             // 
@@ -1239,57 +1550,6 @@
             this.ParroquiaBautismoNovio.UseSystemPasswordChar = false;
             this.ParroquiaBautismoNovio.Click += new System.EventHandler(this.materialSingleLineTextField1_Click);
             // 
-            // AñoExpedienteMatrimonial
-            // 
-            this.AñoExpedienteMatrimonial.Depth = 0;
-            this.AñoExpedienteMatrimonial.Hint = "";
-            this.AñoExpedienteMatrimonial.Location = new System.Drawing.Point(681, 2274);
-            this.AñoExpedienteMatrimonial.MaxLength = 32767;
-            this.AñoExpedienteMatrimonial.MouseState = MaterialSkin.MouseState.HOVER;
-            this.AñoExpedienteMatrimonial.Name = "AñoExpedienteMatrimonial";
-            this.AñoExpedienteMatrimonial.PasswordChar = '\0';
-            this.AñoExpedienteMatrimonial.SelectedText = "";
-            this.AñoExpedienteMatrimonial.SelectionLength = 0;
-            this.AñoExpedienteMatrimonial.SelectionStart = 0;
-            this.AñoExpedienteMatrimonial.Size = new System.Drawing.Size(132, 23);
-            this.AñoExpedienteMatrimonial.TabIndex = 36;
-            this.AñoExpedienteMatrimonial.TabStop = false;
-            this.AñoExpedienteMatrimonial.UseSystemPasswordChar = false;
-            // 
-            // MesExpedienteMatrimonial
-            // 
-            this.MesExpedienteMatrimonial.Depth = 0;
-            this.MesExpedienteMatrimonial.Hint = "";
-            this.MesExpedienteMatrimonial.Location = new System.Drawing.Point(390, 2274);
-            this.MesExpedienteMatrimonial.MaxLength = 32767;
-            this.MesExpedienteMatrimonial.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MesExpedienteMatrimonial.Name = "MesExpedienteMatrimonial";
-            this.MesExpedienteMatrimonial.PasswordChar = '\0';
-            this.MesExpedienteMatrimonial.SelectedText = "";
-            this.MesExpedienteMatrimonial.SelectionLength = 0;
-            this.MesExpedienteMatrimonial.SelectionStart = 0;
-            this.MesExpedienteMatrimonial.Size = new System.Drawing.Size(227, 23);
-            this.MesExpedienteMatrimonial.TabIndex = 35;
-            this.MesExpedienteMatrimonial.TabStop = false;
-            this.MesExpedienteMatrimonial.UseSystemPasswordChar = false;
-            // 
-            // DiaExpedienteMatrimonial
-            // 
-            this.DiaExpedienteMatrimonial.Depth = 0;
-            this.DiaExpedienteMatrimonial.Hint = "";
-            this.DiaExpedienteMatrimonial.Location = new System.Drawing.Point(170, 2274);
-            this.DiaExpedienteMatrimonial.MaxLength = 32767;
-            this.DiaExpedienteMatrimonial.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DiaExpedienteMatrimonial.Name = "DiaExpedienteMatrimonial";
-            this.DiaExpedienteMatrimonial.PasswordChar = '\0';
-            this.DiaExpedienteMatrimonial.SelectedText = "";
-            this.DiaExpedienteMatrimonial.SelectionLength = 0;
-            this.DiaExpedienteMatrimonial.SelectionStart = 0;
-            this.DiaExpedienteMatrimonial.Size = new System.Drawing.Size(92, 23);
-            this.DiaExpedienteMatrimonial.TabIndex = 34;
-            this.DiaExpedienteMatrimonial.TabStop = false;
-            this.DiaExpedienteMatrimonial.UseSystemPasswordChar = false;
-            // 
             // ExplicacionDeObligacionesMatrimonioNovio
             // 
             this.ExplicacionDeObligacionesMatrimonioNovio.Depth = 0;
@@ -1669,23 +1929,23 @@
             this.NombrePadreNovio.Text = "Nombre de Padre";
             this.NombrePadreNovio.UseSystemPasswordChar = false;
             // 
-            // TeléfonoNovio
+            // TelefonoNovio
             // 
-            this.TeléfonoNovio.Depth = 0;
-            this.TeléfonoNovio.Hint = "";
-            this.TeléfonoNovio.Location = new System.Drawing.Point(817, 1596);
-            this.TeléfonoNovio.MaxLength = 32767;
-            this.TeléfonoNovio.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TeléfonoNovio.Name = "TeléfonoNovio";
-            this.TeléfonoNovio.PasswordChar = '\0';
-            this.TeléfonoNovio.SelectedText = "";
-            this.TeléfonoNovio.SelectionLength = 0;
-            this.TeléfonoNovio.SelectionStart = 0;
-            this.TeléfonoNovio.Size = new System.Drawing.Size(118, 23);
-            this.TeléfonoNovio.TabIndex = 11;
-            this.TeléfonoNovio.TabStop = false;
-            this.TeléfonoNovio.Text = "Teléfono";
-            this.TeléfonoNovio.UseSystemPasswordChar = false;
+            this.TelefonoNovio.Depth = 0;
+            this.TelefonoNovio.Hint = "";
+            this.TelefonoNovio.Location = new System.Drawing.Point(817, 1596);
+            this.TelefonoNovio.MaxLength = 32767;
+            this.TelefonoNovio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TelefonoNovio.Name = "TelefonoNovio";
+            this.TelefonoNovio.PasswordChar = '\0';
+            this.TelefonoNovio.SelectedText = "";
+            this.TelefonoNovio.SelectionLength = 0;
+            this.TelefonoNovio.SelectionStart = 0;
+            this.TelefonoNovio.Size = new System.Drawing.Size(118, 23);
+            this.TelefonoNovio.TabIndex = 11;
+            this.TelefonoNovio.TabStop = false;
+            this.TelefonoNovio.Text = "Teléfono";
+            this.TelefonoNovio.UseSystemPasswordChar = false;
             // 
             // EstadoCivilNovio
             // 
@@ -1888,380 +2148,6 @@
             this.btnImprimir.Text = "IMPRIMIR";
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
-            // NombreTestigo
-            // 
-            this.NombreTestigo.Depth = 0;
-            this.NombreTestigo.Hint = "";
-            this.NombreTestigo.Location = new System.Drawing.Point(533, 5782);
-            this.NombreTestigo.MaxLength = 32767;
-            this.NombreTestigo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NombreTestigo.Name = "NombreTestigo";
-            this.NombreTestigo.PasswordChar = '\0';
-            this.NombreTestigo.SelectedText = "";
-            this.NombreTestigo.SelectionLength = 0;
-            this.NombreTestigo.SelectionStart = 0;
-            this.NombreTestigo.Size = new System.Drawing.Size(351, 23);
-            this.NombreTestigo.TabIndex = 93;
-            this.NombreTestigo.TabStop = false;
-            this.NombreTestigo.UseSystemPasswordChar = false;
-            // 
-            // DPITestigo
-            // 
-            this.DPITestigo.Depth = 0;
-            this.DPITestigo.Hint = "";
-            this.DPITestigo.Location = new System.Drawing.Point(664, 5807);
-            this.DPITestigo.MaxLength = 32767;
-            this.DPITestigo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DPITestigo.Name = "DPITestigo";
-            this.DPITestigo.PasswordChar = '\0';
-            this.DPITestigo.SelectedText = "";
-            this.DPITestigo.SelectionLength = 0;
-            this.DPITestigo.SelectionStart = 0;
-            this.DPITestigo.Size = new System.Drawing.Size(129, 23);
-            this.DPITestigo.TabIndex = 94;
-            this.DPITestigo.TabStop = false;
-            this.DPITestigo.UseSystemPasswordChar = false;
-            // 
-            // NacionalidadTestigo
-            // 
-            this.NacionalidadTestigo.Depth = 0;
-            this.NacionalidadTestigo.Hint = "";
-            this.NacionalidadTestigo.Location = new System.Drawing.Point(58, 5834);
-            this.NacionalidadTestigo.MaxLength = 32767;
-            this.NacionalidadTestigo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NacionalidadTestigo.Name = "NacionalidadTestigo";
-            this.NacionalidadTestigo.PasswordChar = '\0';
-            this.NacionalidadTestigo.SelectedText = "";
-            this.NacionalidadTestigo.SelectionLength = 0;
-            this.NacionalidadTestigo.SelectionStart = 0;
-            this.NacionalidadTestigo.Size = new System.Drawing.Size(197, 23);
-            this.NacionalidadTestigo.TabIndex = 95;
-            this.NacionalidadTestigo.TabStop = false;
-            this.NacionalidadTestigo.UseSystemPasswordChar = false;
-            // 
-            // DomicilioTestigo
-            // 
-            this.DomicilioTestigo.Depth = 0;
-            this.DomicilioTestigo.Hint = "";
-            this.DomicilioTestigo.Location = new System.Drawing.Point(415, 5834);
-            this.DomicilioTestigo.MaxLength = 32767;
-            this.DomicilioTestigo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DomicilioTestigo.Name = "DomicilioTestigo";
-            this.DomicilioTestigo.PasswordChar = '\0';
-            this.DomicilioTestigo.SelectedText = "";
-            this.DomicilioTestigo.SelectionLength = 0;
-            this.DomicilioTestigo.SelectionStart = 0;
-            this.DomicilioTestigo.Size = new System.Drawing.Size(304, 23);
-            this.DomicilioTestigo.TabIndex = 96;
-            this.DomicilioTestigo.TabStop = false;
-            this.DomicilioTestigo.UseSystemPasswordChar = false;
-            // 
-            // EdadTestigo
-            // 
-            this.EdadTestigo.Depth = 0;
-            this.EdadTestigo.Hint = "";
-            this.EdadTestigo.Location = new System.Drawing.Point(761, 5834);
-            this.EdadTestigo.MaxLength = 32767;
-            this.EdadTestigo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.EdadTestigo.Name = "EdadTestigo";
-            this.EdadTestigo.PasswordChar = '\0';
-            this.EdadTestigo.SelectedText = "";
-            this.EdadTestigo.SelectionLength = 0;
-            this.EdadTestigo.SelectionStart = 0;
-            this.EdadTestigo.Size = new System.Drawing.Size(59, 23);
-            this.EdadTestigo.TabIndex = 97;
-            this.EdadTestigo.TabStop = false;
-            this.EdadTestigo.UseSystemPasswordChar = false;
-            // 
-            // TelefonoTestigo
-            // 
-            this.TelefonoTestigo.Depth = 0;
-            this.TelefonoTestigo.Hint = "";
-            this.TelefonoTestigo.Location = new System.Drawing.Point(134, 5861);
-            this.TelefonoTestigo.MaxLength = 32767;
-            this.TelefonoTestigo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TelefonoTestigo.Name = "TelefonoTestigo";
-            this.TelefonoTestigo.PasswordChar = '\0';
-            this.TelefonoTestigo.SelectedText = "";
-            this.TelefonoTestigo.SelectionLength = 0;
-            this.TelefonoTestigo.SelectionStart = 0;
-            this.TelefonoTestigo.Size = new System.Drawing.Size(166, 23);
-            this.TelefonoTestigo.TabIndex = 98;
-            this.TelefonoTestigo.TabStop = false;
-            this.TelefonoTestigo.UseSystemPasswordChar = false;
-            // 
-            // ProfesionTestigo
-            // 
-            this.ProfesionTestigo.Depth = 0;
-            this.ProfesionTestigo.Hint = "";
-            this.ProfesionTestigo.Location = new System.Drawing.Point(467, 5861);
-            this.ProfesionTestigo.MaxLength = 32767;
-            this.ProfesionTestigo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ProfesionTestigo.Name = "ProfesionTestigo";
-            this.ProfesionTestigo.PasswordChar = '\0';
-            this.ProfesionTestigo.SelectedText = "";
-            this.ProfesionTestigo.SelectionLength = 0;
-            this.ProfesionTestigo.SelectionStart = 0;
-            this.ProfesionTestigo.Size = new System.Drawing.Size(192, 23);
-            this.ProfesionTestigo.TabIndex = 99;
-            this.ProfesionTestigo.TabStop = false;
-            this.ProfesionTestigo.UseSystemPasswordChar = false;
-            // 
-            // RazonesDeConocerAlCOntrayente
-            // 
-            this.RazonesDeConocerAlCOntrayente.Depth = 0;
-            this.RazonesDeConocerAlCOntrayente.Hint = "";
-            this.RazonesDeConocerAlCOntrayente.Location = new System.Drawing.Point(632, 5886);
-            this.RazonesDeConocerAlCOntrayente.MaxLength = 32767;
-            this.RazonesDeConocerAlCOntrayente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.RazonesDeConocerAlCOntrayente.Name = "RazonesDeConocerAlCOntrayente";
-            this.RazonesDeConocerAlCOntrayente.PasswordChar = '\0';
-            this.RazonesDeConocerAlCOntrayente.SelectedText = "";
-            this.RazonesDeConocerAlCOntrayente.SelectionLength = 0;
-            this.RazonesDeConocerAlCOntrayente.SelectionStart = 0;
-            this.RazonesDeConocerAlCOntrayente.Size = new System.Drawing.Size(294, 23);
-            this.RazonesDeConocerAlCOntrayente.TabIndex = 100;
-            this.RazonesDeConocerAlCOntrayente.TabStop = false;
-            this.RazonesDeConocerAlCOntrayente.UseSystemPasswordChar = false;
-            // 
-            // TiempoDeConocerAlContrayente
-            // 
-            this.TiempoDeConocerAlContrayente.Depth = 0;
-            this.TiempoDeConocerAlContrayente.Hint = "";
-            this.TiempoDeConocerAlContrayente.Location = new System.Drawing.Point(199, 5886);
-            this.TiempoDeConocerAlContrayente.MaxLength = 32767;
-            this.TiempoDeConocerAlContrayente.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TiempoDeConocerAlContrayente.Name = "TiempoDeConocerAlContrayente";
-            this.TiempoDeConocerAlContrayente.PasswordChar = '\0';
-            this.TiempoDeConocerAlContrayente.SelectedText = "";
-            this.TiempoDeConocerAlContrayente.SelectionLength = 0;
-            this.TiempoDeConocerAlContrayente.SelectionStart = 0;
-            this.TiempoDeConocerAlContrayente.Size = new System.Drawing.Size(109, 23);
-            this.TiempoDeConocerAlContrayente.TabIndex = 101;
-            this.TiempoDeConocerAlContrayente.TabStop = false;
-            this.TiempoDeConocerAlContrayente.UseSystemPasswordChar = false;
-            // 
-            // TiempoDeConocerAlContrayente2
-            // 
-            this.TiempoDeConocerAlContrayente2.Depth = 0;
-            this.TiempoDeConocerAlContrayente2.Hint = "";
-            this.TiempoDeConocerAlContrayente2.Location = new System.Drawing.Point(134, 5915);
-            this.TiempoDeConocerAlContrayente2.MaxLength = 32767;
-            this.TiempoDeConocerAlContrayente2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TiempoDeConocerAlContrayente2.Name = "TiempoDeConocerAlContrayente2";
-            this.TiempoDeConocerAlContrayente2.PasswordChar = '\0';
-            this.TiempoDeConocerAlContrayente2.SelectedText = "";
-            this.TiempoDeConocerAlContrayente2.SelectionLength = 0;
-            this.TiempoDeConocerAlContrayente2.SelectionStart = 0;
-            this.TiempoDeConocerAlContrayente2.Size = new System.Drawing.Size(110, 23);
-            this.TiempoDeConocerAlContrayente2.TabIndex = 102;
-            this.TiempoDeConocerAlContrayente2.TabStop = false;
-            this.TiempoDeConocerAlContrayente2.UseSystemPasswordChar = false;
-            // 
-            // RazonesDeConocerAlCOntrayente2
-            // 
-            this.RazonesDeConocerAlCOntrayente2.Depth = 0;
-            this.RazonesDeConocerAlCOntrayente2.Hint = "";
-            this.RazonesDeConocerAlCOntrayente2.Location = new System.Drawing.Point(565, 5915);
-            this.RazonesDeConocerAlCOntrayente2.MaxLength = 32767;
-            this.RazonesDeConocerAlCOntrayente2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.RazonesDeConocerAlCOntrayente2.Name = "RazonesDeConocerAlCOntrayente2";
-            this.RazonesDeConocerAlCOntrayente2.PasswordChar = '\0';
-            this.RazonesDeConocerAlCOntrayente2.SelectedText = "";
-            this.RazonesDeConocerAlCOntrayente2.SelectionLength = 0;
-            this.RazonesDeConocerAlCOntrayente2.SelectionStart = 0;
-            this.RazonesDeConocerAlCOntrayente2.Size = new System.Drawing.Size(228, 23);
-            this.RazonesDeConocerAlCOntrayente2.TabIndex = 103;
-            this.RazonesDeConocerAlCOntrayente2.TabStop = false;
-            this.RazonesDeConocerAlCOntrayente2.UseSystemPasswordChar = false;
-            // 
-            // RazonesConocerContrayente4
-            // 
-            this.RazonesConocerContrayente4.Depth = 0;
-            this.RazonesConocerContrayente4.Hint = "";
-            this.RazonesConocerContrayente4.Location = new System.Drawing.Point(565, 6330);
-            this.RazonesConocerContrayente4.MaxLength = 32767;
-            this.RazonesConocerContrayente4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.RazonesConocerContrayente4.Name = "RazonesConocerContrayente4";
-            this.RazonesConocerContrayente4.PasswordChar = '\0';
-            this.RazonesConocerContrayente4.SelectedText = "";
-            this.RazonesConocerContrayente4.SelectionLength = 0;
-            this.RazonesConocerContrayente4.SelectionStart = 0;
-            this.RazonesConocerContrayente4.Size = new System.Drawing.Size(226, 23);
-            this.RazonesConocerContrayente4.TabIndex = 114;
-            this.RazonesConocerContrayente4.TabStop = false;
-            this.RazonesConocerContrayente4.UseSystemPasswordChar = false;
-            // 
-            // TiempoCOnocerCOntrayente4
-            // 
-            this.TiempoCOnocerCOntrayente4.Depth = 0;
-            this.TiempoCOnocerCOntrayente4.Hint = "";
-            this.TiempoCOnocerCOntrayente4.Location = new System.Drawing.Point(134, 6330);
-            this.TiempoCOnocerCOntrayente4.MaxLength = 32767;
-            this.TiempoCOnocerCOntrayente4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TiempoCOnocerCOntrayente4.Name = "TiempoCOnocerCOntrayente4";
-            this.TiempoCOnocerCOntrayente4.PasswordChar = '\0';
-            this.TiempoCOnocerCOntrayente4.SelectedText = "";
-            this.TiempoCOnocerCOntrayente4.SelectionLength = 0;
-            this.TiempoCOnocerCOntrayente4.SelectionStart = 0;
-            this.TiempoCOnocerCOntrayente4.Size = new System.Drawing.Size(108, 23);
-            this.TiempoCOnocerCOntrayente4.TabIndex = 113;
-            this.TiempoCOnocerCOntrayente4.TabStop = false;
-            this.TiempoCOnocerCOntrayente4.UseSystemPasswordChar = false;
-            // 
-            // TiempoConocerCOntrayente3
-            // 
-            this.TiempoConocerCOntrayente3.Depth = 0;
-            this.TiempoConocerCOntrayente3.Hint = "";
-            this.TiempoConocerCOntrayente3.Location = new System.Drawing.Point(199, 6301);
-            this.TiempoConocerCOntrayente3.MaxLength = 32767;
-            this.TiempoConocerCOntrayente3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TiempoConocerCOntrayente3.Name = "TiempoConocerCOntrayente3";
-            this.TiempoConocerCOntrayente3.PasswordChar = '\0';
-            this.TiempoConocerCOntrayente3.SelectedText = "";
-            this.TiempoConocerCOntrayente3.SelectionLength = 0;
-            this.TiempoConocerCOntrayente3.SelectionStart = 0;
-            this.TiempoConocerCOntrayente3.Size = new System.Drawing.Size(107, 23);
-            this.TiempoConocerCOntrayente3.TabIndex = 112;
-            this.TiempoConocerCOntrayente3.TabStop = false;
-            this.TiempoConocerCOntrayente3.UseSystemPasswordChar = false;
-            // 
-            // RazonesCOnocerContrayente3
-            // 
-            this.RazonesCOnocerContrayente3.Depth = 0;
-            this.RazonesCOnocerContrayente3.Hint = "";
-            this.RazonesCOnocerContrayente3.Location = new System.Drawing.Point(632, 6301);
-            this.RazonesCOnocerContrayente3.MaxLength = 32767;
-            this.RazonesCOnocerContrayente3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.RazonesCOnocerContrayente3.Name = "RazonesCOnocerContrayente3";
-            this.RazonesCOnocerContrayente3.PasswordChar = '\0';
-            this.RazonesCOnocerContrayente3.SelectedText = "";
-            this.RazonesCOnocerContrayente3.SelectionLength = 0;
-            this.RazonesCOnocerContrayente3.SelectionStart = 0;
-            this.RazonesCOnocerContrayente3.Size = new System.Drawing.Size(292, 23);
-            this.RazonesCOnocerContrayente3.TabIndex = 111;
-            this.RazonesCOnocerContrayente3.TabStop = false;
-            this.RazonesCOnocerContrayente3.UseSystemPasswordChar = false;
-            // 
-            // ProfesionTestigo2
-            // 
-            this.ProfesionTestigo2.Depth = 0;
-            this.ProfesionTestigo2.Hint = "";
-            this.ProfesionTestigo2.Location = new System.Drawing.Point(467, 6276);
-            this.ProfesionTestigo2.MaxLength = 32767;
-            this.ProfesionTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ProfesionTestigo2.Name = "ProfesionTestigo2";
-            this.ProfesionTestigo2.PasswordChar = '\0';
-            this.ProfesionTestigo2.SelectedText = "";
-            this.ProfesionTestigo2.SelectionLength = 0;
-            this.ProfesionTestigo2.SelectionStart = 0;
-            this.ProfesionTestigo2.Size = new System.Drawing.Size(190, 23);
-            this.ProfesionTestigo2.TabIndex = 110;
-            this.ProfesionTestigo2.TabStop = false;
-            this.ProfesionTestigo2.UseSystemPasswordChar = false;
-            // 
-            // TelefonoTestigo2
-            // 
-            this.TelefonoTestigo2.Depth = 0;
-            this.TelefonoTestigo2.Hint = "";
-            this.TelefonoTestigo2.Location = new System.Drawing.Point(134, 6276);
-            this.TelefonoTestigo2.MaxLength = 32767;
-            this.TelefonoTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TelefonoTestigo2.Name = "TelefonoTestigo2";
-            this.TelefonoTestigo2.PasswordChar = '\0';
-            this.TelefonoTestigo2.SelectedText = "";
-            this.TelefonoTestigo2.SelectionLength = 0;
-            this.TelefonoTestigo2.SelectionStart = 0;
-            this.TelefonoTestigo2.Size = new System.Drawing.Size(164, 23);
-            this.TelefonoTestigo2.TabIndex = 109;
-            this.TelefonoTestigo2.TabStop = false;
-            this.TelefonoTestigo2.UseSystemPasswordChar = false;
-            // 
-            // EdadTestigo2
-            // 
-            this.EdadTestigo2.Depth = 0;
-            this.EdadTestigo2.Hint = "";
-            this.EdadTestigo2.Location = new System.Drawing.Point(761, 6249);
-            this.EdadTestigo2.MaxLength = 32767;
-            this.EdadTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.EdadTestigo2.Name = "EdadTestigo2";
-            this.EdadTestigo2.PasswordChar = '\0';
-            this.EdadTestigo2.SelectedText = "";
-            this.EdadTestigo2.SelectionLength = 0;
-            this.EdadTestigo2.SelectionStart = 0;
-            this.EdadTestigo2.Size = new System.Drawing.Size(57, 23);
-            this.EdadTestigo2.TabIndex = 108;
-            this.EdadTestigo2.TabStop = false;
-            this.EdadTestigo2.UseSystemPasswordChar = false;
-            // 
-            // DomilicioTestigo2
-            // 
-            this.DomilicioTestigo2.Depth = 0;
-            this.DomilicioTestigo2.Hint = "";
-            this.DomilicioTestigo2.Location = new System.Drawing.Point(415, 6249);
-            this.DomilicioTestigo2.MaxLength = 32767;
-            this.DomilicioTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DomilicioTestigo2.Name = "DomilicioTestigo2";
-            this.DomilicioTestigo2.PasswordChar = '\0';
-            this.DomilicioTestigo2.SelectedText = "";
-            this.DomilicioTestigo2.SelectionLength = 0;
-            this.DomilicioTestigo2.SelectionStart = 0;
-            this.DomilicioTestigo2.Size = new System.Drawing.Size(302, 23);
-            this.DomilicioTestigo2.TabIndex = 107;
-            this.DomilicioTestigo2.TabStop = false;
-            this.DomilicioTestigo2.UseSystemPasswordChar = false;
-            // 
-            // NacionalidadTestigo2
-            // 
-            this.NacionalidadTestigo2.Depth = 0;
-            this.NacionalidadTestigo2.Hint = "";
-            this.NacionalidadTestigo2.Location = new System.Drawing.Point(58, 6249);
-            this.NacionalidadTestigo2.MaxLength = 32767;
-            this.NacionalidadTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NacionalidadTestigo2.Name = "NacionalidadTestigo2";
-            this.NacionalidadTestigo2.PasswordChar = '\0';
-            this.NacionalidadTestigo2.SelectedText = "";
-            this.NacionalidadTestigo2.SelectionLength = 0;
-            this.NacionalidadTestigo2.SelectionStart = 0;
-            this.NacionalidadTestigo2.Size = new System.Drawing.Size(195, 23);
-            this.NacionalidadTestigo2.TabIndex = 106;
-            this.NacionalidadTestigo2.TabStop = false;
-            this.NacionalidadTestigo2.UseSystemPasswordChar = false;
-            // 
-            // DPITestigo2
-            // 
-            this.DPITestigo2.Depth = 0;
-            this.DPITestigo2.Hint = "";
-            this.DPITestigo2.Location = new System.Drawing.Point(664, 6222);
-            this.DPITestigo2.MaxLength = 32767;
-            this.DPITestigo2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.DPITestigo2.Name = "DPITestigo2";
-            this.DPITestigo2.PasswordChar = '\0';
-            this.DPITestigo2.SelectedText = "";
-            this.DPITestigo2.SelectionLength = 0;
-            this.DPITestigo2.SelectionStart = 0;
-            this.DPITestigo2.Size = new System.Drawing.Size(127, 23);
-            this.DPITestigo2.TabIndex = 105;
-            this.DPITestigo2.TabStop = false;
-            this.DPITestigo2.UseSystemPasswordChar = false;
-            // 
-            // NombreTestigo2
-            // 
-            this.NombreTestigo2.Depth = 0;
-            this.NombreTestigo2.Hint = "";
-            this.NombreTestigo2.Location = new System.Drawing.Point(542, 6197);
-            this.NombreTestigo2.MaxLength = 32767;
-            this.NombreTestigo2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NombreTestigo2.Name = "NombreTestigo2";
-            this.NombreTestigo2.PasswordChar = '\0';
-            this.NombreTestigo2.SelectedText = "";
-            this.NombreTestigo2.SelectionLength = 0;
-            this.NombreTestigo2.SelectionStart = 0;
-            this.NombreTestigo2.Size = new System.Drawing.Size(340, 23);
-            this.NombreTestigo2.TabIndex = 104;
-            this.NombreTestigo2.TabStop = false;
-            this.NombreTestigo2.UseSystemPasswordChar = false;
-            // 
             // ExpedienteMatrimonial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2300,7 +2186,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField DireccionNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField NombreMadreNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField NombrePadreNovio;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TeléfonoNovio;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TelefonoNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField EstadoCivilNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField EdadNovio;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -2315,9 +2201,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField FeligresNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField ParroquiaConfirmacionNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField ParroquiaBautismoNovio;
-        private MaterialSkin.Controls.MaterialSingleLineTextField AñoExpedienteMatrimonial;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MesExpedienteMatrimonial;
-        private MaterialSkin.Controls.MaterialSingleLineTextField DiaExpedienteMatrimonial;
         private MaterialSkin.Controls.MaterialSingleLineTextField ExplicacionDeObligacionesMatrimonioNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField AceptaElMatrimonioAbiertoAProcrearNovio;
         private MaterialSkin.Controls.MaterialSingleLineTextField AceptaFidelidadAContuyeNovio;
@@ -2348,9 +2231,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField NacionalidadNovia;
         private MaterialSkin.Controls.MaterialSingleLineTextField DPIPasaporteNovia;
         private MaterialSkin.Controls.MaterialSingleLineTextField NombreCompletoNovia;
-        private MaterialSkin.Controls.MaterialSingleLineTextField AñoNovia;
-        private MaterialSkin.Controls.MaterialSingleLineTextField MesNovia;
-        private MaterialSkin.Controls.MaterialSingleLineTextField DiasNovia;
         private MaterialSkin.Controls.MaterialSingleLineTextField ComoHaLLegadoACOnocerLasObligacionesNovia;
         private MaterialSkin.Controls.MaterialSingleLineTextField AbiertoAProcrearNovia;
         private MaterialSkin.Controls.MaterialSingleLineTextField FidelidadASuEsposoNovia;
