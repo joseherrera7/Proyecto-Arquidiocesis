@@ -242,6 +242,7 @@ namespace ProyectoArquidiocesis
                             MessageBox.Show(null, "Supletoria de Bautismo creada exitosamente", "Supletoria Bautismo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ReLoad();
                             limpiar();
+                            System.IO.File.Delete(newFile);
 
                         }
                     }
@@ -258,7 +259,7 @@ namespace ProyectoArquidiocesis
             {
                 MessageBox.Show("Debe Imprimir previo a guardar definitivamente.", "Guardar Documento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            System.IO.File.Delete(newFile);
+
         }
         public void limpiar()
         {
@@ -308,7 +309,12 @@ namespace ProyectoArquidiocesis
             }
             else
             {
-                document.ReplaceText("_CODIGO_", lblCodigoB.Text);
+                string oldFile = "C:\\Archives\\SUPLETORIA DE BAUTISMO.docx";
+                newFile = "C:\\Archives\\Confirmacion - " + lblCodigoB.Text + ".docx";
+                newFilePDF = "C:\\Archives\\Confirmacion - " + lblCodigoB.Text + ".pdf";
+                using (DocX document = DocX.Load(oldFile))
+                {
+                    document.ReplaceText("_CODIGO_", lblCodigoB.Text);
                 document.ReplaceText("________________parroquia________________________", txt1Parroquia.Text);
                 document.ReplaceText("______________________________bautizado____________________________________", txt2Bautizado.Text);
                 document.ReplaceText("______________________motivo_______________________", txt3Motivo.Text);
