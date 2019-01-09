@@ -13,6 +13,7 @@ using Microsoft.Office.Interop.Word;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
 using Xceed.Words.NET;
+using System.IO;
 
 namespace ProyectoArquidiocesis
 {
@@ -108,6 +109,25 @@ namespace ProyectoArquidiocesis
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            SautinSoft.PdfMetamorphosis p = new SautinSoft.PdfMetamorphosis();
+
+
+
+            if (p != null)
+            {
+                string docxPath = @"C:\Archives\newFile.docx";
+                string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
+
+
+                // 2. Convert DOCX file to PDF file 
+                if (p.DocxToPdfConvertFile(docxPath, pdfPath) == 0)
+                    System.Diagnostics.Process.Start(pdfPath);
+                else
+                {
+                    System.Console.WriteLine("Conversion failed!");
+                    Console.ReadLine();
+                }
+            }
             //id, fecha, notario, confirmado, url doc, hashcode.
             try
             {
