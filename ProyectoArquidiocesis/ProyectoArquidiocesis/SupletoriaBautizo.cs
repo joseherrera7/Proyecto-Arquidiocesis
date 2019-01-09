@@ -195,6 +195,10 @@ namespace ProyectoArquidiocesis
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+
+
+
             //id, fecha, notario, bautizado, url doc, hashcode.
             try
             {
