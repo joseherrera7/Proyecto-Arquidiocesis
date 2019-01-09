@@ -333,7 +333,7 @@ namespace ProyectoArquidiocesis
 
             if (p != null)
             {
-                string docxPath = @"C:\Archives\newFile.docx";
+                string docxPath = @"C:\Archives\Matrimonio - " + lblCodigoB.Text + ".docx";
                 string pdfPath = Path.ChangeExtension(docxPath, ".pdf");
 
 
