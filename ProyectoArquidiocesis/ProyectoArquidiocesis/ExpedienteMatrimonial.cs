@@ -114,6 +114,7 @@ namespace ProyectoArquidiocesis
             }
             string oldFile = "C:\\Archives\\EXPEDIENTE MATRIMONIAL FORMATO 2.docx";
             newFile = "C:\\Archives\\Matrimonio - "+lblCodigoB.Text+".docx";
+            newFile = "C:\\Archives\\Matrimonio - " + lblCodigoB.Text + ".pdf";
             using (DocX document = DocX.Load(oldFile))
             {
                 
